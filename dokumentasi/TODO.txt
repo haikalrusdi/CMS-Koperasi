@@ -1,0 +1,13 @@
+Selesai Bekerja, Tuliskan To Do List Di Sini 
+(TULIS SECARA DETAIL APA2 SAJA UNTUK DIKERJAKAN/DILANJUTKAN OLEH PROGRAMMER BERIKUTNYA)
+
+ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa tulis nama dan nrp anda, serta tanggal dan jam anda menuliskan todo ini
+
+
+2. ...............
+- .... - ( ..... )  
+
+
+1. utk programmer yg kerja pertama kali, selesaikan nomor 1 (import), baca di List To Do Web KPRI.docx
+- Hatma - (9 okt, 20.00)
+
