@@ -1,0 +1,81 @@
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+body {
+margin:0;
+padding:0;
+font-family: arial;
+}
+div#envelope{
+width: 85%;
+margin: 5px 5% 5px 5%;
+padding:0px 0;
+border: 0px solid #7ac9b7;
+border-radius:10px;
+}
+
+
+/* Makes responsive fields. Sets size and field alignment.*/
+#envelope th{
+width: 20%;
+border: 0px solid#000;
+padding-left: 10px;
+}
+#envelope td input{
+margin-bottom: 5px;
+margin-top: 10px;
+width:100%;
+padding: 15px;
+border-radius:1px;
+border:1px solid #7ac9b7;
+}
+#envelope td input[type=submit]
+{
+margin-bottom: 20px;
+width:60%;
+padding: 20px;
+border-radius:2px;
+border:1px solid #7ac9b7;
+background-color: #4180C5;
+color: #fff;
+font-size:15px;
+cursor:pointer;
+}
+#submit:hover
+{
+background-color: black;
+}
+#envelope td input[type=text]:focus {
+border-color: #4697e4;
+}
+#envelope td input[type=checkbox] {
+ margin-left: 300px;
+ width: 5%;
+}
+h2{
+	font-family: arial;
+	padding-left: 10px;
+	font-size:16px;
+	font-weight: bold;
+}
+p{
+font-size:12px;
+}
+th{
+font-size:12px;
+font-weight: bold;
+}
+td p{
+font-size:12px;
+font-weight: bold;
+color :#5D5D5D;
+float: left;
+text-indent: -300px;
+}
+#envelope td input[type=submit]{
+padding:5px;
+}
+#envelope td input[type=text]{
+padding: 8px;
+}
