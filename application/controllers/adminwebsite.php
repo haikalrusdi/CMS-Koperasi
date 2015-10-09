@@ -35,7 +35,7 @@ class Adminwebsite extends CI_Controller {
 	function proseslogin(){		
 		if($_POST){
 			$username = mysql_real_escape_string($_POST['username']);
-			$password = md5(mysql_real_escape_string($_POST['password'])); //Prevent from SQL Injection & Ganti (encrypt) Password di tabel Userapp menjadi md5
+			$password =(mysql_real_escape_string($_POST['password'])); //Prevent from SQL Injection & Ganti (encrypt) Password di tabel Userapp menjadi md5
 			$temp = $this->m_koperasi->GetUser("where username = '$username' and password = '$password'")->result_array();
 			if($temp != NULL){
 				$data = array(
@@ -740,7 +740,7 @@ class Adminwebsite extends CI_Controller {
 			$nama = $_POST['nama'];
 			$nip = $_POST['nip'];
 			$no_anggota = $_POST['no_anggota'];
-			$password = md5($_POST['password']);
+			$password = ($_POST['password']);
 			$unit = $_POST['unit'];
 			$tgl_bergabung = $_POST['tgl_bergabung'];
 			$status_simpan = $_POST['status_simpan'];

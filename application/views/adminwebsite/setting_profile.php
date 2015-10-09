@@ -16,7 +16,7 @@
 					<?php } ?>
 				<div>
                 <div class="row-fluid">
-					<form method="post" id="validate" action="<?php echo base_url(); ?>index.php/webadmin/saveprofile">
+					<form method="post" id="validate" action="<?php echo base_url(); ?>index.php/adminwebsite/saveprofile">
                     <div class="span7"> 
                         <div class="block">
                             <div class="head">                                

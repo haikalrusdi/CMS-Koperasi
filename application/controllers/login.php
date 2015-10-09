@@ -29,7 +29,7 @@ class Login extends CI_Controller {
 	function masuak(){		
 		if($_POST){
 			$no_anggota = mysql_real_escape_string($_POST['no_anggota']);
-			$password =   md5(mysql_real_escape_string($_POST['password']).$this->config->item("key_login"));			
+			$password = (mysql_real_escape_string($_POST['password']).$this->config->item("key_login"));			
 			$temp = $this->m_koperasi->GetAnggota("where no_anggota = '$no_anggota' and password = '$password'")->result_array();
 			if($temp != NULL){
 				$data = array(
@@ -130,8 +130,8 @@ class Login extends CI_Controller {
 	function ganti_pswd($id){
 		if($this->session->userdata("login")!=""){
 			if($_POST){
-			$password_lama = md5(mysql_real_escape_string($_POST['password_lama']).$this->config->item("key_login"));
-			$password_baru = md5(mysql_real_escape_string($_POST['password_baru']).$this->config->item("key_login"));
+			$password_lama = (mysql_real_escape_string($_POST['password_lama']).$this->config->item("key_login"));
+			$password_baru = (mysql_real_escape_string($_POST['password_baru']).$this->config->item("key_login"));
 			$temp = $this->m_koperasi->GetAnggota("where sha1(no_anggota) = '$id' and password = '$password_lama'")->result_array();
 			if($temp != NULL){
 				$data = array(

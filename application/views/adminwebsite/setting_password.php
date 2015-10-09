@@ -17,7 +17,7 @@
 					<?php } ?>
 				<div>
                 <div class="row-fluid">
-					<form method="post" id="validate" action="<?php echo base_url(); ?>index.php/webadmin/savepassword">
+					<form method="post" id="validate" action="<?php echo base_url(); ?>index.php/adminwebsite/savepassword">
                     <div class="span7"> 
                         <div class="block">
                             <div class="head">                                

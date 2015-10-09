@@ -3,6 +3,9 @@ Selesai Bekerja, Tuliskan To Do List Di Sini
 
 ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa tulis nama dan nrp anda, serta tanggal dan jam anda menuliskan todo ini
 
+3. untuk programmer yang bekerja ketiga, selesaikan todo nomor 2 (ganti password)
+- Bhayu Prakasa 5212100084 (9 Okt 15:21)
+- Johannes Dumoli Tambunan 5213100139
 
 2. untuk programmer yg bekerja kedua, selesaikan todo nomor 2 (ganti passowrd)
 - Novi Azizah P 5213100046 - ( 9 Okt, 10.38 )  

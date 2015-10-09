@@ -17,7 +17,7 @@
 				<div>
                 <div class="row-fluid">
                     <div class="span6">
-					<form method="post" id="validate" action="<?php echo base_url(); ?>index.php/webadmin/savesettingdasar"> 
+					<form method="post" id="validate" action="<?php echo base_url(); ?>index.php/adminweb/savesettingdasar"> 
                         <div class="block">
                             <div class="head">                                
                                 <h2>Setting for Blog</h2>

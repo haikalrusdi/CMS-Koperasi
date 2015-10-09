@@ -102,7 +102,7 @@ class M_koperasi extends CI_Model {
                 	'nama'=>$dataarray[$i]['nama'],
                 	'nip'=>$dataarray[$i]['nip'],
                 	'no_anggota'=>$dataarray[$i]['no_anggota'],
-                	'password'=>md5($dataarray[$i]['password'].$this->config->item("key_login")),
+                	'password'=>($dataarray[$i]['password'].$this->config->item("key_login")),
                 	'unit'=>$dataarray[$i]['unit'],
                 	'tgl_bergabung'=>$dataarray[$i]['tgl_bergabung']
             	);
@@ -117,7 +117,7 @@ class M_koperasi extends CI_Model {
                 	'nama'=>$dataarray[$i]['nama'],
                 	'nip'=>$dataarray[$i]['nip'],
                 	'no_anggota'=>$dataarray[$i]['no_anggota'],
-                	'password'=>md5($dataarray[$i]['password']),
+                	'password'=>($dataarray[$i]['password']),
                 	'unit'=>$dataarray[$i]['unit'],
                 	'tgl_bergabung'=>$dataarray[$i]['tgl_bergabung']
             );
@@ -254,4 +254,5 @@ class M_koperasi extends CI_Model {
 		  return $data;
 		}
 	}
+	
 ?>
