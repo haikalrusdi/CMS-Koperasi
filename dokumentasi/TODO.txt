@@ -4,9 +4,9 @@ Selesai Bekerja, Tuliskan To Do List Di Sini
 ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa tulis nama dan nrp anda, serta tanggal dan jam anda menuliskan todo ini
 
 
-2. ...............
-- .... - ( ..... )  
-
+2. untuk programmer yg bekerja kedua, selesaikan todo nomor 2 (ganti passowrd)
+- Novi Azizah P 5213100046 - ( 9 Okt, 10.38 )  
+  Faisal Setia P 5213100155
 
 1. utk programmer yg kerja pertama kali, selesaikan nomor 1 (import), baca di List To Do Web KPRI.docx
 - Hatma - (9 okt, 20.00)

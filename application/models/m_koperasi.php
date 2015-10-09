@@ -201,6 +201,7 @@ class M_koperasi extends CI_Model {
             	$data = array(
                 	'no_anggota'=>$dataarray[$i]['no_anggota'],
                 	'jumlah_pinjaman'=>$dataarray[$i]['jumlah_pinjaman'],
+                	'nip'=>$dataarray[$i]['nip'],
                 	'masa'=>$dataarray[$i]['masa'],
                 	'sekarang'=>$dataarray[$i]['sekarang'],
                 	'sisa'=>$dataarray[$i]['sisa'],
@@ -218,6 +219,7 @@ class M_koperasi extends CI_Model {
         for($i=1;$i<=count($dataarray);$i++){
             $data = array(
                 	'no_anggota'=>$dataarray[$i]['no_anggota'],
+                	'nip'=>$dataarray[$i]['nip'],
                 	'jumlah_pinjaman'=>$dataarray[$i]['jumlah_pinjaman'],
                 	'masa'=>$dataarray[$i]['masa'],
                 	'sekarang'=>$dataarray[$i]['sekarang'],
@@ -237,7 +239,7 @@ class M_koperasi extends CI_Model {
   function search_pinjaman($dataarray){
         for($i=1;$i<=count($dataarray);$i++){
             $search = array(
-            	'nip'=>$dataarray[$i]['nip'],
+            	'nip'=>$dataarray[$i]['nip'], // Tambahkan kolom NIP di Database dan set "Masa" dan "NIP" menjadi NULL
                 'no_anggota'=>$dataarray[$i]['no_anggota']
             );
  		}

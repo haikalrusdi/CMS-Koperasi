@@ -34,8 +34,8 @@ class Adminwebsite extends CI_Controller {
 	
 	function proseslogin(){		
 		if($_POST){
-			$username = addslashes($_POST['username']);
-			$password = addslashes($_POST['password']);			
+			$username = mysql_real_escape_string($_POST['username']);
+			$password = md5(mysql_real_escape_string($_POST['password'])); //Prevent from SQL Injection & Ganti (encrypt) Password di tabel Userapp menjadi md5
 			$temp = $this->m_koperasi->GetUser("where username = '$username' and password = '$password'")->result_array();
 			if($temp != NULL){
 				$data = array(
