@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 09, 2015 at 10:14 AM
+-- Generation Time: Oct 09, 2015 at 01:40 PM
 -- Server version: 5.6.24
--- PHP Version: 5.6.8
+-- PHP Version: 5.5.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -518,7 +518,7 @@ CREATE TABLE IF NOT EXISTS `userapp` (
 --
 
 INSERT INTO `userapp` (`kode_user`, `username`, `password`, `nama_lengkap`, `facebook`, `twitter`, `g_plus`, `about`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Rizki Rinaldi', '', '', '', ''),
+(1, 'admin', 'admin', 'Rizki Rinaldi', '', '', '', ''),
 (2, 'koperasi', '123456', 'Admin Koperasi', '', '', '', NULL);
 
 -- --------------------------------------------------------
@@ -533,7 +533,7 @@ CREATE TABLE IF NOT EXISTS `visitor` (
   `os` varchar(40) DEFAULT NULL,
   `browser` varchar(40) DEFAULT NULL,
   `tanggal` datetime DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `visitor`
@@ -551,7 +551,8 @@ INSERT INTO `visitor` (`no`, `ip`, `os`, `browser`, `tanggal`) VALUES
 (9, '::1', 'Windows 7', 'Firefox 40.0', '2015-10-06 04:45:00'),
 (10, '::1', 'Windows 7', 'Chrome 38.0.2125.101', '2015-10-08 05:50:27'),
 (11, '::1', 'Windows 7', 'Chrome 38.0.2125.101', '2015-10-09 08:01:00'),
-(12, '::1', 'Windows 7', 'Chrome 38.0.2125.101', '2015-10-09 09:56:38');
+(12, '::1', 'Windows 7', 'Chrome 38.0.2125.101', '2015-10-09 09:56:38'),
+(13, '::1', 'Windows 8.1', 'Firefox 41.0', '2015-10-09 12:07:05');
 
 --
 -- Indexes for dumped tables
@@ -698,7 +699,7 @@ ALTER TABLE `userapp`
 -- AUTO_INCREMENT for table `visitor`
 --
 ALTER TABLE `visitor`
-  MODIFY `no` int(7) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
+  MODIFY `no` int(7) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
 --
 -- Constraints for dumped tables
 --

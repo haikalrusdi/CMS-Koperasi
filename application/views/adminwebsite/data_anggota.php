@@ -35,6 +35,10 @@
                                                 <th width="20%">No Anggota</th>
                                                 <th width="20%">Unit</th>
                                                 <th width="20%">Tgl bergabung</th>
+                                                <th width="20%">simpanan</th>
+                                               <!-- <th width="20%">profile</th>
+                                                <th width="20%">pinjaman</th> 
+                                                masih proses -->
                                                 <th width="80" class="TAC">Actions</th>
                                             </tr>
                                         </thead>
@@ -47,7 +51,12 @@
                                                 <td><?php echo $c['no_anggota']; ?></td>
                                                 <td><?php echo $c['unit']; ?></td>
                                                 <td><?php echo $c['tgl_bergabung']; ?></td>
+                                                <td><?php echo $c['total']; ?></td>
+        
                                                 <td>
+                                                    <a href="<?php echo base_url(); ?>index.php/adminwebsite/tampilprofile/<?php echo $c['id_userkoperasi']; ?>" class="button green">
+                                                        <div class="icon"><span class="ico-pencil"></span></div>
+                                                    </a>
                                                     <a href="<?php echo base_url(); ?>index.php/adminwebsite/editanggota/<?php echo $c['id_userkoperasi']; ?>" class="button green">
                                                         <div class="icon"><span class="ico-pencil"></span></div>
                                                     </a>
