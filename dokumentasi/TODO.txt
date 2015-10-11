@@ -3,6 +3,7 @@ Selesai Bekerja, Tuliskan To Do List Di Sini
 
 ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa tulis nama dan nrp anda, serta tanggal dan jam anda menuliskan todo ini
 
+5. untuk programmer yang bekerja keempat, selesaikan todo nomor 4 atau bisa menyelesaikan todo nomer 3
 4. untuk programmer yang bekerja ketiga, selesaikan todo nomor 3 (Menambahkan Action Detail Anggota)
 - Bintang Setyawan 5213100011 (9 Okt 17:15)
 - Harun Rizal 5213100125
