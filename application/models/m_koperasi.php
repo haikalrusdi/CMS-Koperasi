@@ -33,6 +33,9 @@ class M_koperasi extends CI_Model {
 	function Getdataanggota($where = ''){
 		return $this->db->query("select * from kop_anggota $where;");
 	}
+	function getdataanggotaall($where = '') {
+		return $this->db->query("select * from kop_simpanan JOIN kop_anggota ON kop_simpanan.no_anggota=kop_anggota.no_anggota ;");
+	}
 	
 	function GetContent($where = ''){
 		return $this->db->query("select * from content $where;");

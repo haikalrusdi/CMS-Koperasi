@@ -3,6 +3,14 @@ Selesai Bekerja, Tuliskan To Do List Di Sini
 
 ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa tulis nama dan nrp anda, serta tanggal dan jam anda menuliskan todo ini
 
+6. untuk programmer yang bekerja kelima, selesaikan todo nomor 4 (Menambahkan action import, data otomatis pindah dari database calon anggota ke database kop_anggota(fiksasi)
+- Bagas Ananta (12 Okt 10.00)
+- Hafizudin wirawan
+
+5. untuk programmer yang bekerja keempat, selesaikan todo nomor 4 (Menampilkan data anggota yang mendaftar melalui website KPRI dan menambahkan action import.)
+- Fikri Basalamah (9 Okt 19:00)
+- Dedy Puji 
+
 4. untuk programmer yang bekerja ketiga, selesaikan todo nomor 3 (Menambahkan Action Detail Anggota)
 - Bintang Setyawan 5213100011 (9 Okt 17:15)
 - Harun Rizal 5213100125

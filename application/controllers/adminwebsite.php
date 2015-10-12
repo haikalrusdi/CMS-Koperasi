@@ -34,8 +34,8 @@ class Adminwebsite extends CI_Controller {
 	
 	function proseslogin(){		
 		if($_POST){
-			$username = $_POST['username'];
-			$password = $_POST['password']; //Prevent from SQL Injection & Ganti (encrypt) Password di tabel Userapp menjadi md5
+			$username = mysql_real_escape_string($_POST['username']);
+			$password = mysql_real_escape_string($_POST['password']); //Prevent from SQL Injection & Ganti (encrypt) Password di tabel Userapp menjadi md5
 			$temp = $this->m_koperasi->GetUser("where username = '$username' and password = '$password'")->result_array();
 			if($temp != NULL){
 				$data = array(
@@ -801,6 +801,26 @@ class Adminwebsite extends CI_Controller {
 		);
 		$this->template->display('adminwebsite/input_anggota1',$data);
 	}
+		function tampilprofile($kode = 0){
+		$this->cek_session();
+		$data_sess = $this->session->userdata('login');
+		$data_content = $this->m_koperasi->Getdataanggota("where id_userkoperasi = '$kode'")->result_array();
+		/*label to array*/
+		$data = array(
+			'session' => $this->session->userdata('login'),
+			'username' => $data_sess['pengguna'],
+			'id_userkoperasi' => $data_content[0]['id_userkoperasi'],
+			'nama' => $data_content[0]['nama'],
+			'nip' => $data_content[0]['nip'],
+			'no_anggota' => $data_content[0]['no_anggota'],
+			'password' => $data_content[0]['password'],		
+			'unit' => $data_content[0]['unit'],
+			'tgl_bergabung' => $data_content[0]['tgl_bergabung'],
+			'status' => 'lama',
+			'title' => 'Dasboard admin Koperasi ITS - edit content'
+		);
+		$this->template->display('adminwebsite/input_anggota1',$data);
+	}
 
 	function deleteanggota($kode = 0){
 		$this->cek_session();
@@ -884,12 +904,14 @@ class Adminwebsite extends CI_Controller {
 			'session' => $this->session->userdata('login'),
 			'status' => '',
 			'message' =>$mess,
-			'data_anggota' => $this->m_koperasi->Getdataanggota()->result_array(),
+			'data_anggota' => $this->m_koperasi->getdataanggotaall()->result_array(),
 			'label_post' => array(),
 			'title' => 'Dasboard admin Koperasi ITS - Daftar Anggota'
 		);
 		$this->template->display('adminwebsite/data_anggota',$data);
   	}
+
+
 
 
 	function insertsimpanan(){
