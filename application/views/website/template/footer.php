@@ -3,18 +3,21 @@
     	<div class="col-md-3 span_1">
     	  <ul class="spinner1">
 			 <i class="bubble"> </i>
-			 <li class="spinner_head"><h3>Galeri</h3></li>
+			 <li class="spinner_head"><h3>Komentar</h3></li>
 			 <div class="clearfix"> </div>
 		  </ul>
-		  <div class="galeri">
-		  <table border="1" cellpadding="0" cellspacing="0" width="100%">
-                                        <tr><td></td><td></td><td></td></tr>
-                                        <tr><td></td><td></td><td></td></tr>
-                                        <tr><td></td><td></td><td></td></tr>
-                                    </table>
+		  <div class="komentar">
+		  <form action= "<?php echo base_url(); ?> index.php/adminwebsite/comment" method="post">
+			<input type="text" name="nama anda" placeholder="nama anda">
+			<input type="text" name="perihal komentar" placeholder="perihal komentar">
+			<input type="text" name="masukkan komentar" placeholder="masukkan komentar">
+			<input type="submit" value="submit komentar">
+		  </form> 
+                                        
     	</div>
 		<div class="clearfix"> </div>
 		</div>
+		
     	
     	<div class="col-md-3 span_1">
     	  <ul class="spinner1">
