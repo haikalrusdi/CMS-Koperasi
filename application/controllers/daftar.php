@@ -58,6 +58,23 @@ class Daftar extends CI_Controller {
 				$data1 = array(
 						'nip' => $nip
 				);
+			/*$cek_nip = $this->m_koperasi->GetCalon()->result_array(); //<--------- tolong fix ini, memindahkan dari database calon ke database kop_angggota + bisa ditampilkan ke tabel anggota
+			if($cek_nip== NULL){
+				$data = array(
+					'nama' => $nama,
+					'nip' => $nip,
+					'no_anggota' => $no_anggota,
+					'password' => $password,
+					'unit' => $unit,
+					'status_anggota' => $status_anggota,
+					'tgl_bergabung' => $tgl_bergabung
+				);
+				$result = $this->m_koperasi->InsertData('kop_anggota',$data);
+				if($result==1){
+				$data1 = array(
+						'nip' => $nip*/
+			
+				);
 				$this->session->set_userdata('daftar',$data1);
 					redirect("daftar/data");
 				}else{
@@ -126,4 +143,6 @@ class Daftar extends CI_Controller {
 		}
 	}*/
 	
+		}
+	}
 }
