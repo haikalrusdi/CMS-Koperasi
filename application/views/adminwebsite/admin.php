@@ -27,18 +27,32 @@
 									--></li>
                                 </ul>                                  
                             </div> 
+							<?php 
+							if (!isset($datauser) ){
+							$datausername="";
+							$datanama_lengkap="";
+							$datapassword = "";
+							
+							}else{
+							foreach($datauser as $u){
+							$datausername=$u['username'];
+							$datanama_lengkap=$u['nama_lengkap'];
+							$datapassword = $u['password'];
+							}}
+							
+							 ?>
                             <div class="data-fluid">                                
                                 <div class="row-form">
                                     <div class="span3"> Username :</div>
-                                    <div class="span9"><input type="text" class="validate[required]" name="username" placeholder="username"/></div>
+                                    <div class="span9"><input type="text" class="validate[required]" name="username" placeholder="username" value="<?php echo $datausername; ?>"/> </div>
                                 </div>                 
                                 <div class="row-form">
                                     <div class="span3"> Nama Pengguna :</div>
-                                    <div class="span9"><input type="text" class="validate[required]" name="pengguna" placeholder="nama pengguna"/></div>
+                                    <div class="span9"><input type="text" class="validate[required]" name="pengguna" placeholder="nama pengguna"  value="<?php echo $datanama_lengkap; ?>"/></div>
                                 </div>
                                 <div class="row-form">
                                     <div class="span3"> Password :</div>
-                                    <div class="span9"><input type="text" class="validate[required]" name="password" placeholder="password"/></div>
+                                    <div class="span9"><input type="text" class="validate[required]" name="password" placeholder="password" value="<?php echo $datapassword; ?>"/></div>
                                 </div>
                             </div>
                         </div>
@@ -56,22 +70,31 @@
                             <div class="data-fluid">								
                                 <div class="row-form">
                                     <div class="span3"> Google+ (url) :</div>
-                                    <div class="span9"><input type="text" name="g_plus" placeholder="google+"/></div>
+                                    <div class="span9"><input type="text" name="g_plus" placeholder="google+" /></div>
                                 </div> 
                                 <div class="row-form">
                                     <div class="span3"> Facebook (url) :</div>
-                                    <div class="span9"><input type="text" name="facebook" placeholder="facebook"/></div>
+                                    <div class="span9"><input type="text" name="facebook" placeholder="facebook" /></div>
                                 </div>
                                 <div class="row-form">
                                     <div class="span3"> Twitter (url):</div>
-                                    <div class="span9"><input type="text" name="twitter" placeholder="twitter"/></div>
+                                    <div class="span9"><input type="text" name="twitter" placeholder="twitter" /></div>
                                 </div>
+									
 								 <div class="row-form">
                                     <div class="span3"></div>
                                     <div class="span9" >
                                         <button class="btn btn-danger" onclick="$('#validate').submit();" style="float:right;" type="button">Simpan 
 										<span class="icon-lock icon-white"></span></button>
 										<!--<input type="submit" value="Simpan" class="btn btn-danger" style="float:right;" />-->
+                                    </div>
+                                </div>
+								<div class="row-form">
+                                    <div class="span3"></div>
+                                    <div class="span9" >
+                                        <button class="btn btn-danger" onclick="$('#validate').update();" style="float:right;" type="button">Update 
+										<span class="icon-lock icon-white"></span></button>
+										<!--<input type="update" value="Update" class="btn btn-danger" style="float:right;" />-->
                                     </div>
                                 </div>
                             </div>
@@ -111,9 +134,13 @@
                                                 <td><a href=""><?php echo $u['twitter']; ?></a></td>
                                                 <td><a href=""><?php echo $u['g_plus']; ?></a></td>
                                                 <td>
-                                                    <a href="<?php echo base_url(); ?>index.php/webadmin/deleteuser/<?php echo $u['kode_user']; ?>" onclick="return confirm('yakin hapus data ini ?');" class="button red">
+                                                    <a href="<?php echo base_url(); ?>index.php/Adminwebsite/deleteuser/<?php echo $u['kode_user']; ?>" onclick="return confirm('yakin hapus data ini ?');" class="button red">
                                                         <div class="icon"><span class="ico-remove"></span></div>
-                                                    </a>                                              
+                                                    </a>
+													
+													<a href="<?php echo base_url(); ?>index.php/adminwebsite/edituser/<?php echo $u['kode_user']; ?>" onclick="return confirm('yakin data ini ?');" class="button blue">
+                                                        <div class="icon"><span class="ico-remove"></span></div>
+                                                    </a>
                                                 </td>
                                             </tr>
 										<?php } ?>

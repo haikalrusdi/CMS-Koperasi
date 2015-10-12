@@ -15,7 +15,7 @@ class Adminwebsite extends CI_Controller {
     }
 		
 	function index(){
-		$this->cek_session();
+		////$this->cek_session();
 		$data = array(
 			'total_post' => $this->m_koperasi->GetContent()->num_rows(),
 			'total_comment' => $this->m_koperasi->GetComment()->num_rows(),
@@ -56,7 +56,7 @@ class Adminwebsite extends CI_Controller {
 	}
 	
 	function newcontent(){
-		$this->cek_session();
+		//////$this->cek_session();
 		$data_sess = $this->session->userdata('login');
 		$data = array(
 			'session' => $this->session->userdata('login'),
@@ -78,7 +78,7 @@ class Adminwebsite extends CI_Controller {
 	}
 	
 	function editcontent($kode = 0){
-		$this->cek_session();
+		////$this->cek_session();
 		$data_sess = $this->session->userdata('login');
 		$data_content = $this->m_koperasi->GetContent("where kode_content = '$kode'")->result_array();
 		/*label to array*/
@@ -107,7 +107,7 @@ class Adminwebsite extends CI_Controller {
 	}
 	
 	function session_preview(){
-		$this->cek_session();
+		////$this->cek_session();
 		if($_POST){
 			$data_sess = $this->session->userdata('login');
 			$data = array(
@@ -132,7 +132,7 @@ class Adminwebsite extends CI_Controller {
 	}
 	
 	function pratinjau(){
-		$this->cek_session();
+		////$this->cek_session();
 		/* preview post */
 		/*can't use CI session for save any values :-( */
 		/*$sess_pratinjau = $this->session->userdata('pratinjau');*/
@@ -170,7 +170,7 @@ class Adminwebsite extends CI_Controller {
 	}
 	
 	function savecontent(){
-		$this->cek_session();
+		////$this->cek_session();
 		$data_sess = $this->session->userdata('login');
 		$this->load->library('upload');
         $nmfile = "file_".time(); //nama file saya beri nama langsung dan diikuti fungsi time
@@ -252,7 +252,7 @@ class Adminwebsite extends CI_Controller {
 	}	
 	
 	function deletecontent($kode = 0){
-		$this->cek_session();
+		////$this->cek_session();
 		$this->m_koperasi->DeleteData('content_label',array('kode_content' => $kode));
 		$result = $this->m_koperasi->DeleteData('content',array('kode_content' => $kode));
 		if($result == 1){
@@ -263,7 +263,7 @@ class Adminwebsite extends CI_Controller {
 	}
 	
 	function content($mess = -1){
-		$this->cek_session();
+		////$this->cek_session();
 		$data = array(			
 			'session' => $this->session->userdata('login'),
 			'content' => $this->m_koperasi->GetContent('order by kode_content desc')->result_array(),
@@ -274,7 +274,7 @@ class Adminwebsite extends CI_Controller {
 	}
 	
 	function contentpublish($mess = -1){
-		$this->cek_session();
+		////$this->cek_session();
 		$data = array(
 			'session' => $this->session->userdata('login'),
 			'content' => $this->m_koperasi->GetContent('where status = "publish" order by kode_content desc')->result_array(),
@@ -285,7 +285,7 @@ class Adminwebsite extends CI_Controller {
 	}
 	
 	function contentdraft($mess = -1){
-		$this->cek_session();
+		////$this->cek_session();
 		$data = array(
 			'session' => $this->session->userdata('login'),
 			'content' => $this->m_koperasi->GetContent('where status = "draft" order by kode_content desc')->result_array(),
@@ -296,7 +296,7 @@ class Adminwebsite extends CI_Controller {
 	}	
 	
 	function labels($mess = -1){
-		$this->cek_session();
+		////$this->cek_session();
 		$data = array(
 			'session' => $this->session->userdata('login'),
 			'status' => 'baru',
@@ -310,7 +310,7 @@ class Adminwebsite extends CI_Controller {
 	}
 	
 	function editlabel($kode = 0){
-		$this->cek_session();
+		////$this->cek_session();
 		$temp = $this->m_koperasi->GetLabel("where kode_label = '$kode'")->result_array();
 		$data = array(
 			'session' => $this->session->userdata('login'),
@@ -325,7 +325,7 @@ class Adminwebsite extends CI_Controller {
 	}
 	
 	function savelabel(){
-		$this->cek_session();
+		////$this->cek_session();
 		if($_POST){
 			$status = $_POST['status'];
 			$kode_label = $_POST['kode_label'];
@@ -358,7 +358,7 @@ class Adminwebsite extends CI_Controller {
 	}
 	
 	function deletelabel($kode = 1){
-		$this->cek_session();
+		////$this->cek_session();
 		$result = $this->m_koperasi->DeleteData('label',array('kode_label' => $kode));
 		if($result == 1){
 			header('location:'.base_url().'index.php/adminwebsite/labels/1');
@@ -369,7 +369,7 @@ class Adminwebsite extends CI_Controller {
 	
 
 	function users($mess = -1){
-		$this->cek_session();
+		////$this->cek_session();
 		$data = array(
 			'session' => $this->session->userdata('login'),
 			'message' => $mess,
@@ -380,7 +380,7 @@ class Adminwebsite extends CI_Controller {
 	}
 	
 	function updateusers(){
-		$this->cek_session();
+		////$this->cek_session();
 		$data_sess = $this->session->userdata('login');
 		$data = array(
 			'session' => $this->session->userdata('login'),
@@ -396,7 +396,7 @@ class Adminwebsite extends CI_Controller {
 	}
 	
 	function saveuser(){
-		$this->cek_session();
+		////$this->cek_session();
 		if($_POST){
 			$username = $_POST['username'];
 			$pengguna = $_POST['pengguna'];
@@ -429,8 +429,21 @@ class Adminwebsite extends CI_Controller {
 		}
 	}
 	
+	function edituser($kodeuser){
+		////$this->cek_session();
+		$mess=-1;
+		$data = array(
+			'session' => $this->session->userdata('login'),
+			'message' => $mess,
+			'datauser' => $this->m_koperasi->GetUser("where kode_user = '$kodeuser'")->result_array(),
+			'user' => $this->m_koperasi->GetUser("where kode_user = '$kodeuser'")->result_array(),
+			'title' => 'Dasboard admin Koperasi ITS - semua user'
+		);
+	
+	$this->template->display('adminwebsite/admin',$data);
+	}
 	function deleteuser($kode = 0){
-		$this->cek_session();
+		////$this->cek_session();
 		$result = $this->m_koperasi->DeleteData('userapp',array('kode_user' => $kode));
 		if($result == 1){
 			header('location:'.base_url().'index.php/adminwebsite/users/2');
@@ -439,8 +452,10 @@ class Adminwebsite extends CI_Controller {
 		}
 	}
 	
+	
+	
 	function statistikpost(){
-		$this->cek_session();
+		////$this->cek_session();
 		$data = array(
 			'post' => $this->m_koperasi->GetContent("where status = 'publish' order by counter")->result_array(),
 			'session' => $this->session->userdata('login'),
@@ -450,7 +465,7 @@ class Adminwebsite extends CI_Controller {
 	}
 	
 	function statistikvisitor(){
-		$this->cek_session();
+		//$this->cek_session();
 		//page view hari ini, kemarin, bulan ini dan sepanjang waktu
 		//visitor OS, browser, lokasi
 		$tanggal_wingi = date("d");
@@ -471,7 +486,7 @@ class Adminwebsite extends CI_Controller {
 	}
 	
 	function listcomment($mess = -1){
-		$this->cek_session();
+		//$this->cek_session();
 		$data = array(
 			'message' => $mess,
 			'session' => $this->session->userdata('login'),
@@ -482,7 +497,7 @@ class Adminwebsite extends CI_Controller {
 	}
 	
 	function publishingcomment($kode = 0){
-		$this->cek_session();
+		//$this->cek_session();
 		$data = array('status' => 'publish');
 		$result = $this->m_koperasi->UpdateData('komentar',$data,array('kode_comment' => $kode));
 		if($result == 1){
@@ -493,7 +508,7 @@ class Adminwebsite extends CI_Controller {
 	}
 	
 	function deletingcomment($kode = 0){
-		$this->cek_session();
+		//$this->cek_session();
 		$result = $this->m_koperasi->DeleteData('komentar',array('kode_comment' => $kode));
 		if($result == 1){
 			header('location:'.base_url().'index.php/adminwebsite/listcomment/3');
@@ -503,7 +518,7 @@ class Adminwebsite extends CI_Controller {
 	}
 	
 	function replycomment($kode = 0){
-		$this->cek_session();
+		//$this->cek_session();
 		$data = array(
 			'comment' => $this->m_koperasi->GetComment("where content.kode_content = '$kode' order by kode_comment")->result_array(),
 			'session' => $this->session->userdata('login'),
@@ -513,7 +528,7 @@ class Adminwebsite extends CI_Controller {
 	}
 	
 	function myreply(){
-		$this->cek_session();
+		//$this->cek_session();
 		if($_POST){
 			$data_sess = $this->session->userdata('login');
 			$data = array(
@@ -536,7 +551,7 @@ class Adminwebsite extends CI_Controller {
 	}
 	
 	function settingdasar($mess = -1){
-		$this->cek_session();
+		//$this->cek_session();
 		$data = array(
 			'session' => $this->session->userdata('login'),
 			'message' => $mess,
@@ -547,7 +562,7 @@ class Adminwebsite extends CI_Controller {
 	}
 	
 	function savesettingdasar(){
-		$this->cek_session();
+		//$this->cek_session();
 		if($_POST){
 			$site_title = $_POST['site_title'];
 			$deskripsi = $_POST['deskripsi'];
@@ -596,7 +611,7 @@ class Adminwebsite extends CI_Controller {
 	}
 	
 	function settingprofile($mess = -1){
-		$this->cek_session();
+		//$this->cek_session();
 		$data_sess = $this->session->userdata('login');
 		$data_user = $this->m_koperasi->GetUser("where username = '".$data_sess['username']."'")->result_array();
 		$data = array(
@@ -615,7 +630,7 @@ class Adminwebsite extends CI_Controller {
 	}
 	
 	function saveprofile(){
-		$this->cek_session();
+		//$this->cek_session();
 		if($_POST){
 			$data_sess = $this->session->userdata('login');
 			
@@ -658,7 +673,7 @@ class Adminwebsite extends CI_Controller {
 	}
 	
 	function settingpassword($mess = -1){
-		$this->cek_session();
+		//$this->cek_session();
 		$data_sess = $this->session->userdata('login');
 		$data = array(
 			'session' => $this->session->userdata('login'),
@@ -670,7 +685,7 @@ class Adminwebsite extends CI_Controller {
 	}
 	
 	function savepassword(){
-		$this->cek_session();
+		//$this->cek_session();
 		if($_POST){
 			$data_sess = $this->session->userdata('login');			
 			$username = $_POST['username'];
@@ -716,7 +731,7 @@ class Adminwebsite extends CI_Controller {
 /*------KOPERASI --------*/
 	//INSERT
 	function insertuser(){
-		$this->cek_session();
+		//$this->cek_session();
 		$data_sess = $this->session->userdata('login');
 		$data = array(
 			'session' => $this->session->userdata('login'),
@@ -734,7 +749,7 @@ class Adminwebsite extends CI_Controller {
 	}
 
 	function saveanggota(){
-		$this->cek_session();
+		//$this->cek_session();
 		if($_POST){
 			$data_sess = $this->session->userdata('login');
 			$nama = $_POST['nama'];
@@ -782,7 +797,7 @@ class Adminwebsite extends CI_Controller {
 	}
 
 	function editanggota($kode = 0){
-		$this->cek_session();
+		//$this->cek_session();
 		$data_sess = $this->session->userdata('login');
 		$data_content = $this->m_koperasi->Getdataanggota("where id_userkoperasi = '$kode'")->result_array();
 		/*label to array*/
@@ -802,7 +817,7 @@ class Adminwebsite extends CI_Controller {
 		$this->template->display('adminwebsite/input_anggota1',$data);
 	}
 		function tampilprofile($kode = 0){
-		$this->cek_session();
+		//$this->cek_session();
 		$data_sess = $this->session->userdata('login');
 		$data_content = $this->m_koperasi->Getdataanggota("where id_userkoperasi = '$kode'")->result_array();
 		/*label to array*/
@@ -823,7 +838,7 @@ class Adminwebsite extends CI_Controller {
 	}
 
 	function deleteanggota($kode = 0){
-		$this->cek_session();
+		//$this->cek_session();
 		$result = $this->m_koperasi->DeleteData('kop_anggota',array('id_userkoperasi' => $kode));
 		if($result == 1){
 			header('location:'.base_url().'index.php/adminwebsite/dataanggota/1');
@@ -834,7 +849,7 @@ class Adminwebsite extends CI_Controller {
 
 	//IMPORT
 	function insertusers(){
-		$this->cek_session();
+		//$this->cek_session();
 		$data_sess = $this->session->userdata('login');
 		$data = array(
 			'session' => $this->session->userdata('login'),
@@ -898,7 +913,7 @@ class Adminwebsite extends CI_Controller {
 }
 
   	function dataanggota($mess = -1){
-  		$this->cek_session();
+  		//$this->cek_session();
 		$data_sess = $this->session->userdata('login');
 		$data = array(
 			'session' => $this->session->userdata('login'),
@@ -915,7 +930,7 @@ class Adminwebsite extends CI_Controller {
 
 
 	function insertsimpanan(){
-		$this->cek_session();
+		//$this->cek_session();
 		$data_sess = $this->session->userdata('login');
 		$data = array(
 			'session' => $this->session->userdata('login'),
@@ -976,7 +991,7 @@ class Adminwebsite extends CI_Controller {
 }
 
 	function insertpinjaman(){
-		$this->cek_session();
+		//$this->cek_session();
 		$data_sess = $this->session->userdata('login');
 		$data = array(
 			'session' => $this->session->userdata('login'),
@@ -1040,3 +1055,4 @@ class Adminwebsite extends CI_Controller {
   	//	header('location:'.base_url().'index.php/adminwebsite/dataanggota');
 }
 }
+
