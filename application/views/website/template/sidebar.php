@@ -10,12 +10,15 @@
 				<p class="submit"><input type="submit" name="login" value="Login"></p>
 			  </form>
 		  </div>
+		  
 		  <br />
+		  
 		  <ul class="spinner">
 			<i class="spinner_icon"> </i>
 			<li class="spinner_head"><h3>Download</h3></li>
 			<div class="clearfix"> </div>
 		  </ul>
+		  
 		  <div class="download">
 			  <ul>
 					<li>
@@ -28,11 +31,28 @@
 		  </div>
 		  
 		  <br />
+		 
+		   <ul class="spinner">
+		   <i class="spinner_icon"> </i>
+			<li class="spinner_head"><h3>Kritik dan Saran</h3></li>
+			<div class="clearfix"> </div>
+		  </ul>
+		  <div class="kritik-dan-saran">
+			  <form method="post" action="<?php echo base_url(); ?>index.php/login/saran_kritik">
+				<input type="text" name="kritik" placeholder="kritik">
+				<input type="text" name="saran" placeholder="saran">
+				<input type="submit" name="login" value="submit">
+			  </form>
+		  </div>
+		  
+		  <br />
+		  
 		  <ul class="spinner">
 			<i class="spinner_icon"> </i>
 			<li class="spinner_head"><h3>Layanan Anggota</h3></li>
 			<div class="clearfix"> </div>
 		  </ul>
+		  
 		  <div class="sidebar-box">
 		   
 		  <table class="scroll">
@@ -65,4 +85,5 @@
 		   </table>
 		
 		<div class="sidebar-box-fot"></div>
+		
 		</div>
