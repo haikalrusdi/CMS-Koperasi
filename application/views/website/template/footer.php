@@ -6,7 +6,7 @@
 			 <li class="spinner_head"><h3>Komentar</h3></li>
 			 <div class="clearfix"> </div>
 		  </ul>
-		  <div class="komentar">
+		  <div class="komentarkomen">
 		  <form action= "<?php echo base_url(); ?> index.php/adminwebsite/comment" method="post">
 			<input type="text" name="nama anda" placeholder="nama anda">
 			<input type="text" name="perihal komentar" placeholder="perihal komentar">
