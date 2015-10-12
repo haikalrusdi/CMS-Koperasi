@@ -3,6 +3,9 @@ Selesai Bekerja, Tuliskan To Do List Di Sini
 
 ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa tulis nama dan nrp anda, serta tanggal dan jam anda menuliskan todo ini
 
+6. untuk programmer yang bekerja kelima, selesaikan todo nomor 5 
+- Riza Rahmah Angelia 5213100036 (12 Okt 12:45)
+- Dedy Puji Jayanto 5213100041
 5. untuk programmer yang bekerja keempat, selesaikan todo nomor 4 atau bisa menyelesaikan todo nomer 3
 4. untuk programmer yang bekerja ketiga, selesaikan todo nomor 3 (Menambahkan Action Detail Anggota)
 - Bintang Setyawan 5213100011 (9 Okt 17:15)
