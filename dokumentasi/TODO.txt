@@ -14,7 +14,9 @@ ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa
 
 
 
-
+9. untuk programmer selanjutnya, silahkan memperbaiki halaman login yang tampilannya ada kemungkinan eror.
+-Gilang Pandu S (5213100117)
+-Ahmad Sirajudin (5213100129)
 8. untuk programmer selanjutnya, silahkan lakukan pengecekan untuk setiap list todo karena sejauh ini saat kami mencoba fitur di website yang masuk ke list todo sudah selesai semua namun kami tidak dapat memastikan bahwa semuanya telah berjalan dengan baik. Silahkan lakukan pengecekan terhadap kekurangan yang mungkin ada.
 - Daniel Surya Anjas 5213100058 (16.10)
 - Dwi Karya Maha Putra 5213100138
