@@ -72,9 +72,9 @@ class Daftar extends CI_Controller {
 				$result = $this->m_koperasi->InsertData('kop_anggota',$data);
 				if($result==1){
 				$data1 = array(
-						'nip' => $nip*/
+						'nip' => $nip
 			
-				);
+				);*/
 				$this->session->set_userdata('daftar',$data1);
 					redirect("daftar/data");
 				}else{
@@ -144,5 +144,3 @@ class Daftar extends CI_Controller {
 	}*/
 	
 		}
-	}
-}

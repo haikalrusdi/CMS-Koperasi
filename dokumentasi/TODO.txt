@@ -3,6 +3,9 @@ Selesai Bekerja, Tuliskan To Do List Di Sini
 
 ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa tulis nama dan nrp anda, serta tanggal dan jam anda menuliskan todo ini
 
+8. untuk programmer selanjutnya, silahkan lakukan pengecekan untuk setiap list todo karena sejauh ini saat kami mencoba fitur di website yang masuk ke list todo sudah selesai semua namun kami tidak dapat memastikan bahwa semuanya telah berjalan dengan baik. Silahkan lakukan pengecekan terhadap kekurangan yang mungkin ada.
+- Daniel Surya Anjas 5213100058 (16.10)
+- Dwi Karya Maha Putra 5213100138
 7. untuk programmer yang bekerja ketujuh, selesaikan todo nomor 6 (Todo nomor 6 berisi pengaturan password admin di halaman admin, reset update dan insert admin baru, seterusnya todo nomor 7 telah diselesaikan.)
 - Daniel Surya Anjas 5213100058 (15.10)
 - Dwi Karya Maha Putra 5213100138
