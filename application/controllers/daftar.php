@@ -99,7 +99,7 @@ class Daftar extends CI_Controller {
 			$nip = $nip['nip'];
 		$data = array(
 					'session' => $this->session->userdata('data'),
-					'title' => 'Selamat Anda Sudah Mendaftar Di KPRI ITS',
+					'title' => 'Berikutnya, silakan cetak form ini (klik tombol Print Formulir di bagian bawah), lalu tanda tangani, lalu kumpulkan ke kantor KPRI',
 					'datanya' => $this->m_koperasi->GetCalon("where nip='$nip'")->result_array()
 				);
 				$this->template_web->pendaftaran('website/calon_koperasi',$data);
