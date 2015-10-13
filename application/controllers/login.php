@@ -30,7 +30,7 @@ class Login extends CI_Controller {
 		if($_POST){
 			$no_anggota = $_POST['no_anggota'];
 			$password = $_POST['password'].$this->config->item("key_login");			
-			$temp = $this->m_koperasi->GetAnggota("where no_anggota = '$no_anggota' and password = '$password'")->result_array();
+			$temp = $this->m_koperasi->GetAnggota("where no_anggota = '$no_anggota' and password = md5('$password')")->result_array();
 			if($temp != NULL){
 				$data = array(
 					'logged_in' => 'yesGetMeLogin',

@@ -72,9 +72,9 @@ class Daftar extends CI_Controller {
 				$result = $this->m_koperasi->InsertData('kop_anggota',$data);
 				if($result==1){
 				$data1 = array(
-						'nip' => $nip*/
+						'nip' => $nip
 			
-				);
+				);*/
 				$this->session->set_userdata('daftar',$data1);
 					redirect("daftar/data");
 				}else{
@@ -99,7 +99,7 @@ class Daftar extends CI_Controller {
 			$nip = $nip['nip'];
 		$data = array(
 					'session' => $this->session->userdata('data'),
-					'title' => 'Selamat Anda Sudah Mendaftar Di KPRI ITS',
+					'title' => 'Berikutnya, silakan cetak form ini (klik tombol Print Formulir di bagian bawah), lalu tanda tangani, lalu kumpulkan ke kantor KPRI',
 					'datanya' => $this->m_koperasi->GetCalon("where nip='$nip'")->result_array()
 				);
 				$this->template_web->pendaftaran('website/calon_koperasi',$data);
@@ -144,5 +144,3 @@ class Daftar extends CI_Controller {
 	}*/
 	
 		}
-	}
-}
