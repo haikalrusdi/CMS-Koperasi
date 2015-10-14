@@ -8,7 +8,9 @@ ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa
 
 
 
-
+16. Rizky Ryandhi (5213100112) & M Hanif Rusdiansyah (5213100120)
+menambahkan pesan kalau salah memasukan captcha, tapi blm bisa validasi karena kesulitan mencari variable captcha. 
+validasi masih belum bisa
 15. ASHMA HANIFAH (5213100076) & SITI ORYZA KHAIRUNNISA (5213100110)
 Rabu, 14 Oktober 2015 (14.00 - 15.00)
 Pada website.php;
