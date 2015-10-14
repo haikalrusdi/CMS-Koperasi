@@ -32,13 +32,49 @@
 				</div>
 				</div>
 <script type="text/javascript">
-	function cekForm(){
-			if($('#password_baru').val()!=$('#ulangi_password').val()){
-				alert('Password Tidak Sama !')
-				return false;
-			}if($('#password_lama').val()==$('#password_baru').val()){
-				alert('Password Baru sama dengan Password lama !')
-				return false;
-			}
-			}
+
+
+function validatePassword() {
+var password_lama,password_baru,ulangi_password,output = true;
+
+password_lama = document.frmChange.password_lama;
+password_baru = document.frmChange.password_baru;
+ulangi_password = document.frmChange.ulangi_password;
+
+if(!password_lama.value) {
+password_lama.focus();
+document.getElementById("password_lama").innerHTML = "required";
+output = false;
+}
+else if(!password_baru.value) {
+password_baru.focus();
+document.getElementById("password_baru").innerHTML = "required";
+output = false;
+}
+else if(!ulangi_password.value) {
+ulangi_password.focus();
+document.getElementById("ulangi_password").innerHTML = "required";
+output = false;
+}
+if(password_baru.value != ulangi_password.value) {
+password_baru.value="";
+ulangi_password.value="";
+password_baru.focus();
+document.getElementById("ulangi_password").innerHTML = "not same";
+output = false;
+} 	
+return output;
+}
+
+
+
+	//function cekForm(){
+			//if($('#password_baru').val()!=$('#ulangi_password').val()){
+				//alert('Password Tidak Sama !')
+				//return false;
+			//}if($('#password_lama').val()==$('#password_baru').val()){
+				//alert('Password Baru sama dengan Password lama !')
+				//return false;
+			//}
+			//}
 	</script>

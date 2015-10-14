@@ -9,7 +9,14 @@ ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa
 
 
 
-
+13. ASHMA HANIFAH (5213100076) & SITI ORYZA KHAIRUNNISA (5213100110)
+Rabu, 14 Oktober 2015 (14.00 - 15.00)
+Pada website.php;
+-menambahkan ajax captcha pada login anggota, yaitu direktori file jpg nya
+panjang karakter dari word nya, ukuran font, dan poolnya.
+-Lalu pada bagian validasi captcha tersebut, kami tambahkan query apabila
+waktu captcha sudah habis maka ia akan expired.
+Untuk Programmer selanjutnya, memperbaiki validasi captcha pada login anggota.
 12.untuk programmer selanjutnya , silahkan cek kembali fitur keamanan captcha apakah sudah berhasil atau tidak karena pada form komentar dan form kritik saran gambar captcha tidak keluar
 -Muhammad Farhan Naufal (5213100045)
 -Denny Angga Setyawan	(5213100178)
@@ -24,15 +31,21 @@ Yang harus dilanjutkan programmer selanjutnya :
 2. Melakukan verifikasi pada captcha agar dapat terdeteksi jika captcha salah masih bisa lanjut.
 
 
-10. untuk programmer selanjutnya, silahkan memperbaiki halaman login pada proses pengecekan captcha.
+11. untuk programmer selanjutnya, silahkan memperbaiki halaman login pada proses pengecekan captcha.
 -Miftah Reza Maulana (5213100171)
 -Hutomo Bhakti S. (5213100064)
-9. untuk programmer selanjutnya, silahkan memperbaiki halaman login yang tampilannya ada kemungkinan eror.
+10. untuk programmer selanjutnya, silahkan memperbaiki halaman login yang tampilannya ada kemungkinan eror.
 -Gilang Pandu S (5213100117)
 -Ahmad Sirajudin (5213100129)
+
+9. untuk programmer selanjutnya, silahkan lakukan perbaikan pada tombol update yang ada di adminwebsite, soal nomor 4 dan 6. tombol edit yang ada pada tabel data admin sudah berjalan dengan baik, tetapi pada tombol update belum berjalan dengan baik.
+- Kanthy Silvia P (5212100001)
+- Ariska Nur A (5213100140)
+
 8. untuk programmer selanjutnya, silahkan lakukan pengecekan untuk setiap list todo karena sejauh ini saat kami mencoba fitur di website yang masuk ke list todo sudah selesai semua namun kami tidak dapat memastikan bahwa semuanya telah berjalan dengan baik. Silahkan lakukan pengecekan terhadap kekurangan yang mungkin ada.
 - Daniel Surya Anjas 5213100058 (16.10)
 - Dwi Karya Maha Putra 5213100138
+
 7. untuk programmer yang bekerja ketujuh, selesaikan todo nomor 6 (Todo nomor 6 berisi pengaturan password admin di halaman admin, reset update dan insert admin baru, seterusnya todo nomor 7 telah diselesaikan.)
 - Daniel Surya Anjas 5213100058 (15.10)
 - Dwi Karya Maha Putra 5213100138

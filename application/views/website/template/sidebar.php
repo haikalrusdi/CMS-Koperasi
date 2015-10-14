@@ -9,7 +9,11 @@
 				<p><input type="password" name="password" value="" placeholder="Password"></p>
 				<p><img src="../captcha/captcha.php" width="214px" alt="captcha"></p>
 				<p><input type="text" name="captcha" value="" placeholder="Masukan kode diatas" required></p>
-				<p class="submit"><input type="submit" name="login" value="Login"></p>
+				
+				
+				<p class="submit">
+				
+				<input type="submit" name="login" value="Login"></p>
 
 
 				
