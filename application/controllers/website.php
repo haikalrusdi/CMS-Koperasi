@@ -142,11 +142,14 @@ class Website extends CI_Controller {
 	function ajaxcaptcha($kode = 0){
 		$vals = array(
 			'img_path' => 'captcha/',
-			'img_url' => base_url().'captcha/',
+			'img_url' => '..\captcha\1435119411.85.jpg',
 			'font_path' => 'system/font/texb.ttf',
 			'img_width' => 200,
 			'img_height' => 60,
-			'expiration' => 90
+			'word_length' => 8,
+			'font_size' => 16,
+			'expiration' => 90,
+			'pool' => '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 		);
 		
 		$cap = create_captcha($vals);
@@ -157,14 +160,19 @@ class Website extends CI_Controller {
 		);
 		$expiration = time()-90;
 		$this->db->query("delete from captcha where captcha_time < ".$expiration);
-		$this->m_koperasi->InsertData('captcha',$data);
+		$this->dbkpri->Insert_string('captcha',$data);
+		echo 'Submit the word you see below:';
+		echo $cap['image'];
+		echo '<input type="text" name="captcha" value="" />';
 		$this->load->view('website/form_komentar',array('kode_content' => $kode,'image' => $cap['image']));
 	}
 	
 	function validasicaptcha(){
 		if($_POST){
 			$expiration = time()-90;
-			$this->db->query("DELETE FROM captcha WHERE captcha_time < ".$expiration);
+			$this->dbkpri->where('captcha_time < ', $expiration)
+				->delete('captcha');
+			//$this->dbkpri->query("DELETE FROM captcha WHERE captcha_time < ".$expiration);
 			
 			$sql = "SELECT COUNT(*) AS count FROM captcha WHERE word = ? AND ip_address = ? AND captcha_time > ?";
 			$binds = array($_POST['text_user'], $this->input->ip_address(), $expiration);
