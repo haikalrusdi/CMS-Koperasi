@@ -9,7 +9,7 @@ ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa
 
 
 
-13. ASHMA HANIFAH (5213100076) & SITI ORYZA KHAIRUNNISA (5213100110)
+15. ASHMA HANIFAH (5213100076) & SITI ORYZA KHAIRUNNISA (5213100110)
 Rabu, 14 Oktober 2015 (14.00 - 15.00)
 Pada website.php;
 -menambahkan ajax captcha pada login anggota, yaitu direktori file jpg nya
@@ -17,10 +17,14 @@ panjang karakter dari word nya, ukuran font, dan poolnya.
 -Lalu pada bagian validasi captcha tersebut, kami tambahkan query apabila
 waktu captcha sudah habis maka ia akan expired.
 Untuk Programmer selanjutnya, memperbaiki validasi captcha pada login anggota.
-12.untuk programmer selanjutnya , silahkan cek kembali fitur keamanan captcha apakah sudah berhasil atau tidak karena pada form komentar dan form kritik saran gambar captcha tidak keluar
+14.untuk programmer selanjutnya , silahkan cek kembali fitur keamanan captcha apakah sudah berhasil atau tidak karena pada form komentar dan form kritik saran gambar captcha tidak keluar
 -Muhammad Farhan Naufal (5213100045)
 -Denny Angga Setyawan	(5213100178)
-11. SAFRINA KHARISMA I (5213100028) - ADIMAS EKA PUTRA (52131000101)
+13. Kirana Gita L (5213100056) & Fitri Larasati L (5213100175)
+Rabu 14 oktober 2015 : 12.00 - 14.00
+Untuk programmar selanjutnya bisa memperbaiki untuk memunculkan gambar captcha serta mensinkronkan captcha yang dimasukkan harus sesuai.
+
+12. SAFRINA KHARISMA I (5213100028) - ADIMAS EKA PUTRA (52131000101)
 Rabu, 14 Oktober 2015 jam 10.00 - 11.00 WIB dan 11.00 - 12.00
 1. Mengedit pada bagian adminwebsite.php menambahkan :
 SQL INJECTION dan MD5 pada admin.
