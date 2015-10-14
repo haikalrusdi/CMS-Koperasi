@@ -9,7 +9,14 @@ ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa
 
 
 
-
+13. ASHMA HANIFAH (5213100076) & SITI ORYZA KHAIRUNNISA (5213100110)
+Rabu, 14 Oktober 2015 (14.00 - 15.00)
+Pada website.php;
+-menambahkan ajax captcha pada login anggota, yaitu direktori file jpg nya
+panjang karakter dari word nya, ukuran font, dan poolnya.
+-Lalu pada bagian validasi captcha tersebut, kami tambahkan query apabila
+waktu captcha sudah habis maka ia akan expired.
+Untuk Programmer selanjutnya, memperbaiki validasi captcha pada login anggota.
 12.untuk programmer selanjutnya , silahkan cek kembali fitur keamanan captcha apakah sudah berhasil atau tidak karena pada form komentar dan form kritik saran gambar captcha tidak keluar
 -Muhammad Farhan Naufal (5213100045)
 -Denny Angga Setyawan	(5213100178)
