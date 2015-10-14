@@ -11,6 +11,15 @@ ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa
 
 
 
+11. SAFRINA KHARISMA I (5213100028) - ADIMAS EKA PUTRA (52131000101)
+Rabu, 14 Oktober 2015 jam 10.00 - 11.00 WIB dan 11.00 - 12.00
+1. Mengedit pada bagian adminwebsite.php menambahkan :
+SQL INJECTION dan MD5 pada admin.
+2. Mengedit chaptca pada halaman saran dan kritik pada footer.php.
+
+Yang harus dilanjutkan programmer selanjutnya :
+1. Mengedit md5 dengan mekoneksikan ke database useapp
+2. Melakukan verifikasi pada captcha agar dapat terdeteksi jika captcha salah masih bisa lanjut.
 
 
 10. untuk programmer selanjutnya, silahkan memperbaiki halaman login pada proses pengecekan captcha.
