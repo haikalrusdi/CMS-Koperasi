@@ -7,13 +7,18 @@
 			  <form method="post" action="<?php echo base_url(); ?>index.php/login/masuak">
 				<p><input type="text" name="no_anggota" value="" placeholder="No Anggota"></p>
 				<p><input type="password" name="password" value="" placeholder="Password"></p>
-				<p><img src="../captcha/1435119411.85.jpg" width="214px" alt="Capctha"></p>
+				<p><img src="../captcha/captcha.php" width="214px" alt="captcha"></p>
 				<p><input type="text" name="captcha" value="" placeholder="Masukan kode diatas" required></p>
 				
 				
 				<p class="submit">
 				
 				<input type="submit" name="login" value="Login"></p>
+
+
+				
+
+
 			  </form>
 		  </div>
 		  
@@ -47,6 +52,10 @@
 			  <form method="post" action="<?php echo base_url(); ?>index.php/login/saran_kritik">
 				<input type="text" name="kritik" placeholder="kritik">
 				<input type="text" name="saran" placeholder="saran">
+				<img src="1435119411.85.jpeg?rand=<?php echo rand(); ?>"
+				id = "captchaing">
+				<label for="message">Masukkan kode diatas :</label>
+				<input id="6_letters_code" name="6_letters_code" type="text">
 				<input type="submit" name="login" value="submit">
 			  </form>
 		  </div>
