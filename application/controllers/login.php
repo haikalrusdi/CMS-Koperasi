@@ -29,14 +29,18 @@ class Login extends CI_Controller {
 	function masuak(){		
 		if($_POST){
 			$no_anggota = $_POST['no_anggota'];
-			$password = $_POST['password'].$this->config->item("key_login");			
+			$password = $_POST['password'].$this->config->item("key_login");
+			$no_anggota = htmlspecialchars($no_anggota);
+			$password = strip_tags($password);
+			$capt = $_POST["capt"] != $_SESSION["capt"] OR $_SESSION["capt"]=='';
 			$temp = $this->m_koperasi->GetAnggota("where no_anggota = '$no_anggota' and password = md5('$password')")->result_array();
 			if($temp != NULL){
 				$data = array(
 					'logged_in' => 'yesGetMeLogin',
 					'no_anggota' => $temp[0]['no_anggota'],
 					'pengguna' => $temp[0]['nama'],
-					'password' => $temp[0]['password']
+					'password' => $temp[0]['password'],
+					'capt' => $temp[0]['capt']
 				);
 				$this->session->set_userdata('login',$data);
 				redirect("login");

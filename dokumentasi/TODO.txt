@@ -10,11 +10,26 @@ ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa
 
 
 
+12.untuk programmer selanjutnya , silahkan cek kembali fitur keamanan captcha apakah sudah berhasil atau tidak karena pada form komentar dan form kritik saran gambar captcha tidak keluar
+-Muhammad Farhan Naufal (5213100045)
+-Denny Angga Setyawan	(5213100178)
+11. SAFRINA KHARISMA I (5213100028) - ADIMAS EKA PUTRA (52131000101)
+Rabu, 14 Oktober 2015 jam 10.00 - 11.00 WIB dan 11.00 - 12.00
+1. Mengedit pada bagian adminwebsite.php menambahkan :
+SQL INJECTION dan MD5 pada admin.
+2. Mengedit chaptca pada halaman saran dan kritik pada footer.php.
+
+Yang harus dilanjutkan programmer selanjutnya :
+1. Mengedit md5 dengan mekoneksikan ke database useapp
+2. Melakukan verifikasi pada captcha agar dapat terdeteksi jika captcha salah masih bisa lanjut.
 
 
-
-
-
+10. untuk programmer selanjutnya, silahkan memperbaiki halaman login pada proses pengecekan captcha.
+-Miftah Reza Maulana (5213100171)
+-Hutomo Bhakti S. (5213100064)
+9. untuk programmer selanjutnya, silahkan memperbaiki halaman login yang tampilannya ada kemungkinan eror.
+-Gilang Pandu S (5213100117)
+-Ahmad Sirajudin (5213100129)
 8. untuk programmer selanjutnya, silahkan lakukan pengecekan untuk setiap list todo karena sejauh ini saat kami mencoba fitur di website yang masuk ke list todo sudah selesai semua namun kami tidak dapat memastikan bahwa semuanya telah berjalan dengan baik. Silahkan lakukan pengecekan terhadap kekurangan yang mungkin ada.
 - Daniel Surya Anjas 5213100058 (16.10)
 - Dwi Karya Maha Putra 5213100138

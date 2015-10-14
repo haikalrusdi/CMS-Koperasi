@@ -41,6 +41,18 @@
                     <input type="password" name="password" placeholder="password"/>
                 </div>            
             </div>
+
+
+            <div class="row-form">
+                <div class="span12">
+                <p><img src="../captcha/captcha.php" width="214px" alt="captcha"></p>
+                <p><input type="text" name="captcha" value="" placeholder="Masukan kode diatas" required></p>
+                </div>            
+            </div>
+
+
+
+
             <div class="row-form">
                 <div class="span12">
                     <!--<button class="btn">Sign in <span class="icon-arrow-next icon-white"></span></button>-->
