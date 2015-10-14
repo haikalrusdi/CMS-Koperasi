@@ -10,7 +10,9 @@ ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa
 
 
 
-
+12.untuk programmer selanjutnya , silahkan cek kembali fitur keamanan captcha apakah sudah berhasil atau tidak karena pada form komentar dan form kritik saran gambar captcha tidak keluar
+-Muhammad Farhan Naufal (5213100045)
+-Denny Angga Setyawan	(5213100178)
 11. SAFRINA KHARISMA I (5213100028) - ADIMAS EKA PUTRA (52131000101)
 Rabu, 14 Oktober 2015 jam 10.00 - 11.00 WIB dan 11.00 - 12.00
 1. Mengedit pada bagian adminwebsite.php menambahkan :
