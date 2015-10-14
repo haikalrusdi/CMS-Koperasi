@@ -7,6 +7,8 @@
 			  <form method="post" action="<?php echo base_url(); ?>index.php/login/masuak">
 				<p><input type="text" name="no_anggota" value="" placeholder="No Anggota"></p>
 				<p><input type="password" name="password" value="" placeholder="Password"></p>
+				<p><img src="../captcha/captcha.php" width="214px" alt="Capctha"></p>
+				<p><input type="text" name="captcha" value="" placeholder="Masukan kode diatas" required></p>
 				<p class="submit"><input type="submit" name="login" value="Login"></p>
 			  </form>
 		  </div>

@@ -13,7 +13,9 @@ ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa
 
 
 
-
+10. untuk programmer selanjutnya, silahkan memperbaiki halaman login pada proses pengecekan captcha.
+-Miftah Reza Maulana (5213100171)
+-Hutomo Bhakti S. (5213100064)
 9. untuk programmer selanjutnya, silahkan memperbaiki halaman login yang tampilannya ada kemungkinan eror.
 -Gilang Pandu S (5213100117)
 -Ahmad Sirajudin (5213100129)

@@ -36,6 +36,8 @@ class Adminwebsite extends CI_Controller {
 		if($_POST){
 			$username = $_POST['username'];
 			$password = $_POST['password']; //Prevent from SQL Injection & Ganti (encrypt) Password di tabel Userapp menjadi md5
+			$username= htmlspecialchars($username);
+			$password= strip_tags($password);
 			$temp = $this->m_koperasi->GetUser("where username = '$username' and password = '$password'")->result_array();
 			if($temp != NULL){
 				$data = array(
