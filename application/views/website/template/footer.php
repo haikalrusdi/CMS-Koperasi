@@ -13,8 +13,7 @@
 			<input type="text" name="masukkan komentar" placeholder="masukkan komentar">
 			<img src="1435119411.85.jpeg?rand=<?php echo rand(); ?>"
 			id="captchaimg" >
-			<label for="message">Enter the code above here :</label>
-			<input id="6_letters_code" name="6_letters_code" type="text">
+            <p><input type="text" name="captcha" value="" placeholder="Masukan kode diatas" required></p>
 			<input type="submit" value="submit komentar">
 		  </form> 
                                         

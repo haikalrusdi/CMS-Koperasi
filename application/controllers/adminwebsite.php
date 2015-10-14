@@ -1,4 +1,26 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php 
+function sqlinjection($data) {
+	$filter_sql = mysql_real_escape_string(stripslashes(strip_tags(html_sqlspecialchars($data,ENT_QUOTES))));
+		return $filter_sql;
+		}
+
+	
+	if(isset($_POST['submit'])) {
+		$username=mysql_real_escape_string($_POST['username']); //changed
+		$password=mysql_real_escape_string(md5($_POST['password'])); //changed
+		//$pwd=mysql_real_escape_string($_POST['passwd']);
+		$sql1="SELECT * FROM userapp WHERE name='$username' and password='$password'";
+		$result1=mysql_query($sql1);
+		$count1=mysql_num_rows($result1);
+		session_start();
+		if($count1>0)
+		{
+			setcookie(User, $username);
+			header("location: index.php");
+		}
+	 } 
+
+if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Adminwebsite extends CI_Controller {
 	/*
