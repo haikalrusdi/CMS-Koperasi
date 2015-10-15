@@ -7,7 +7,7 @@ ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa
 
 
 
-
+17. edited by dedy puji . follow ig @dedthing
 16. Rizky Ryandhi (5213100112) & M Hanif Rusdiansyah (5213100120)
 menambahkan pesan kalau salah memasukan captcha, tapi blm bisa validasi karena kesulitan mencari variable captcha. 
 validasi masih belum bisa
