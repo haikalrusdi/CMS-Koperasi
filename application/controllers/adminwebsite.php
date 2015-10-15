@@ -6,9 +6,12 @@ function sqlinjection($data) {
 //
 	
 	if(isset($_POST['submit'])) {
-		//bagian yang dirubah 5213100034 & 5213100166
+		// bagian ini telah dirubah 5213100034 & 5213100166
+		
 		$username=mysql_real_escape_string($_POST['username']); //changed
+		
 		$password=mysql_real_escape_string(md5($_POST['password'])); //changed
+		
 		//$pwd=mysql_real_escape_string($_POST['passwd']);
 		$sql1="SELECT * FROM userapp WHERE name='$username' and password='$password'";
 		$result1=mysql_query($sql1);
@@ -57,8 +60,11 @@ class Adminwebsite extends CI_Controller {
 	
 	function proseslogin(){		
 		if($_POST){
-			$username = mysql_real_escape_string($_POST['username']);
-			$password = mysql_real_escape_string(md5($_POST['password']); //Prevent from SQL Injection & Ganti (encrypt) Password di tabel Userapp menjadi md5
+			
+			$username = mysql_real_escape_string($_POST['username']); //ini telah diubah oleh 5213100034 & 5213100166
+			
+			//ini telah diubah oleh 5213100034 & 5213100166
+			$password = mysql_real_escape_string($_POST['password']); //Prevent from SQL Injection & Ganti (encrypt) Password di tabel Userapp menjadi md5
 			$username= htmlspecialchars($username);
 			$password= strip_tags($password);
 			$capt=$_POST["capt"] != $_SESSION["capt"] OR $_SESSION["capt"]=='';
@@ -73,6 +79,8 @@ class Adminwebsite extends CI_Controller {
 			$this->session->set_userdata('application\views\adminwebsite\login',$data);
 				redirect("application\views\adminwebsite\login");
 			}
+			
+			// //ini telah diubah oleh 5213100034 & 5213100166 // ubah session 
 			if($capt){
 				echo "<SCRIPT LANGUAGE='JavaScript'>
 				window.alert('Captcha salah yang anda inputkan salah !!')
@@ -80,6 +88,7 @@ class Adminwebsite extends CI_Controller {
 				</SCRIPT>";
 				//redirect(website);
 			}
+			
 			else{		
 				echo "<SCRIPT LANGUAGE='JavaScript'>
 				window.alert('No Anggota atau Password Anda Salah !!')
@@ -434,9 +443,13 @@ class Adminwebsite extends CI_Controller {
 	function saveuser(){
 		////$this->cek_session();
 		if($_POST){
+			//ini telah diubah oleh 5213100034 & 5213100166
 			$username = mysql_real_escape_string($_POST['username']);
+			
 			$pengguna = $_POST['pengguna'];
-			$password = mysql_real_escape_string(md5,$_POST['password']);
+		
+			$password = mysql_real_escape_string(md5,$_POST['password']); //ini telah diubah oleh 5213100034 & 5213100166
+			
 			$facebook = $_POST['facebook'];
 			$twitter = $_POST['twitter'];
 			$g_plus = $_POST['g_plus'];
@@ -671,13 +684,15 @@ class Adminwebsite extends CI_Controller {
 			$data_sess = $this->session->userdata('login');
 			
 			$kode_user = $_POST['kode_user'];
-			$username = mysql_real_escape_string($_POST['username']);
+			
+			$username = mysql_real_escape_string($_POST['username']); //ini telah diubah oleh 5213100034 & 5213100166
 			$nama_lengkap = $_POST['nama_lengkap'];
 			$facebook = $_POST['facebook'];
 			$g_plus = $_POST['g_plus'];
 			$twitter = $_POST['twitter'];
 			$about = $_POST['about'];
-			$password = mysql_real_escape_string(md5,$_POST['password']);
+			
+			$password = mysql_real_escape_string(md5,$_POST['password']); //ini telah diubah oleh 5213100034 & 5213100166
 			
 			if($password == $data_sess['password']){
 				$data = array(

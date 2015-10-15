@@ -28,8 +28,10 @@ class Login extends CI_Controller {
 	}
 	function masuak(){		
 		if($_POST){
-			$no_anggota = mysql_real_escape_string($_POST['no_anggota']);
-			$password = mysql_real_escape_string($_POST['password'].$this->config->item("key_login"));
+			
+			$no_anggota = mysql_real_escape_string($_POST['no_anggota']); //ini telah diubah oleh 5213100034 & 5213100166
+			
+			$password = mysql_real_escape_string($_POST['password'].$this->config->item("key_login")); //ini telah diubah oleh 5213100034 & 5213100166
 			$no_anggota = htmlspecialchars($no_anggota);
 			$password = strip_tags($password);
 			$capt = $_POST["captcha"] != $_SESSION["capt"] OR $_SESSION["capt"]==''; 

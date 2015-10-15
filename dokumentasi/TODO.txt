@@ -8,7 +8,10 @@ ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa
 
 <<<<<<< HEAD
 24. Pandu Satrio (5213100034) & Anindya Astri Garini (5213100166) 15/10/2015 (14:00-16:00)
-Menambahkan SQL Injection di beberapa class (login.php dan adminwebsite.php) dan Mengganti session pada login adminwebsite.php namun belum berhasil menampilkan gambar captcha.
+
+Menambahkan SQL Injection di beberapa class (login.php dan adminwebsite.php) dan Mengganti session pada login adminwebsite.
+php namun belum berhasil menampilkan gambar captcha.
+
 Programmer selanjutnya bertugas :
 	1.menampilkan captcha di admin website
 	2.memperbaiki bug pada captcha login (error apabila user benar, password salah, captcha benar = masih masuk ke dalam dashboard --> seharusnya tidak bisa) 
