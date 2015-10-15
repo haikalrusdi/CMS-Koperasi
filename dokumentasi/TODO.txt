@@ -1,7 +1,7 @@
 akhir 23
 pualing
 
-Selesai Bekerja, Tuliskan To Do List Yang Anda Lakukan Di Sini 
+Selesai Bekerja, Tuliskan To Do List Di Sini 
 (TULIS SECARA DETAIL APA2 SAJA UNTUK DIKERJAKAN/DILANJUTKAN OLEH PROGRAMMER BERIKUTNYA)
 
 ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa tulis nama dan nrp anda, serta tanggal dan jam anda menuliskan todo ini
