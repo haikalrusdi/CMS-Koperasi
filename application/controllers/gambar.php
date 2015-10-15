@@ -11,17 +11,17 @@ $_SESSION["Captcha"]="";
 //tentukan ukuran gambar
 $gbr = imagecreate(200, 50);
 
-//warna background gambar
+
 imagecolorallocate($gbr, 167, 218, 239);
 
 $grey = imagecolorallocate($gbr, 128, 128, 128);
 
 $black = imagecolorallocate($gbr, 0, 0,0);
 
-// tentukan font
+
 $font = "monaco.ttf"; 
 
-// membuat nomor acak dan ditampilkan pada gambar
+
 for($i=0;$i<=5;$i++) {
 	// jumlah karakter
 	$nomor=rand(0, 9);

@@ -6,8 +6,13 @@ Selesai Bekerja, Tuliskan To Do List Di Sini
 
 ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa tulis nama dan nrp anda, serta tanggal dan jam anda menuliskan todo ini
 
-20. Umar Al Aqsho (5213100107) & Ramadhan Pratama Budiman (5213100015) 15/Oktober/2015 (10.00 -12.00)
+21. Umar Al Aqsho (5213100107) & Ramadhan Pratama Budiman (5213100015) 15/Oktober/2015 (10.00 -12.00)
 mengedit website.php mengganti base url pada captcha. belum bisa validasi captcha. untuk programer selanjutnya buat agar captcha berhasil.
+20. Andre Firmansyah (5213100032) & Nimas Nawangsih (5213100100)
+Menambahkan code program pada controller dan view pada folder application untuk menjalankan captcha code ignitier.
+Namun belum berhasil menampilkan gambar captcha berupa karakter random dan validasinya.
+Programmer selanjutnya tugasnya membuat captcha dengan karakter random dan background bebas
+
 19. create branch edited lagi by dedy
 18. edited lagi by dedy puji. follow ig @dedthing
 17. Baru saja di edit dengan kalimat ini
