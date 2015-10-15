@@ -32,7 +32,12 @@ class Login extends CI_Controller {
 			$password = $_POST['password'].$this->config->item("key_login");
 			$no_anggota = htmlspecialchars($no_anggota);
 			$password = strip_tags($password);
-			$capt = $_POST["capt"] != $_SESSION["capt"] OR $_SESSION["capt"]=='';
+			$capt = $_POST["captcha"] != $_SESSION["capt"] OR $_SESSION["capt"]==''; 
+			
+			if($capt){
+				redirect(website);
+			}			
+			
 			$temp = $this->m_koperasi->GetAnggota("where no_anggota = '$no_anggota' and password = md5('$password')")->result_array();
 			if($temp != NULL){
 				$data = array(
