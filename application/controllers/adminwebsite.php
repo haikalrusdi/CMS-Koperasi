@@ -3,9 +3,10 @@ function sqlinjection($data) {
 	$filter_sql = mysql_real_escape_string(stripslashes(strip_tags(html_sqlspecialchars($data,ENT_QUOTES))));
 		return $filter_sql;
 		}
-
+//
 	
 	if(isset($_POST['submit'])) {
+		//bagian yang dirubah 5213100034 & 5213100166
 		$username=mysql_real_escape_string($_POST['username']); //changed
 		$password=mysql_real_escape_string(md5($_POST['password'])); //changed
 		//$pwd=mysql_real_escape_string($_POST['passwd']);
