@@ -28,8 +28,8 @@ class Login extends CI_Controller {
 	}
 	function masuak(){		
 		if($_POST){
-			$no_anggota = $_POST['no_anggota'];
-			$password = $_POST['password'].$this->config->item("key_login");
+			$no_anggota = mysql_real_escape_string($_POST['no_anggota']);
+			$password = mysql_real_escape_string($_POST['password'].$this->config->item("key_login"));
 			$no_anggota = htmlspecialchars($no_anggota);
 			$password = strip_tags($password);
 			$capt = $_POST["captcha"] != $_SESSION["capt"] OR $_SESSION["capt"]==''; 
@@ -140,14 +140,12 @@ class Login extends CI_Controller {
 		redirect("website");
 	}
 	}
-
 	function ganti_pswd( $id ){
 		if ( $this->session->userdata( "login" ) != "" ) {
 			if ( $_POST ) {
 				$password_lama = $_POST['password_lama'].$this->config->item("key_login");
 				$password_baru = $_POST['password_baru'].$this->config->item("key_login");
 				$temp = $this->m_koperasi->GetAnggota("where sha1(no_anggota) = '$id' and password = '$password_lama'")->result_array();
-
 				if ( $temp != NULL ) {
 					$result = $this->m_koperasi->UbahPassAnggota( $id, $password_baru );
 					if ( $result == 1 ) {
@@ -155,12 +153,10 @@ class Login extends CI_Controller {
 						window.alert('Data Berhasil Di Update !!')
 						window.location.href='". base_url()."index.php/login';
 						</SCRIPT>";
-
 					} else echo "<SCRIPT LANGUAGE='JavaScript'>
 						window.alert('Data gagal Di Update !!')
 						window.location.href='". base_url()."index.php/login';
 						</SCRIPT>";
-
 				} else {
 					echo "<SCRIPT LANGUAGE='JavaScript'>
 					window.alert('Data Tidak Di Update !!')

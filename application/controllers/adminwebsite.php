@@ -3,9 +3,10 @@ function sqlinjection($data) {
 	$filter_sql = mysql_real_escape_string(stripslashes(strip_tags(html_sqlspecialchars($data,ENT_QUOTES))));
 		return $filter_sql;
 		}
-
+//
 	
 	if(isset($_POST['submit'])) {
+		//bagian yang dirubah 5213100034 & 5213100166
 		$username=mysql_real_escape_string($_POST['username']); //changed
 		$password=mysql_real_escape_string(md5($_POST['password'])); //changed
 		//$pwd=mysql_real_escape_string($_POST['passwd']);
@@ -56,8 +57,8 @@ class Adminwebsite extends CI_Controller {
 	
 	function proseslogin(){		
 		if($_POST){
-			$username = $_POST['username'];
-			$password = $_POST['password']; //Prevent from SQL Injection & Ganti (encrypt) Password di tabel Userapp menjadi md5
+			$username = mysql_real_escape_string($_POST['username']);
+			$password = mysql_real_escape_string(md5($_POST['password']); //Prevent from SQL Injection & Ganti (encrypt) Password di tabel Userapp menjadi md5
 			$username= htmlspecialchars($username);
 			$password= strip_tags($password);
 			$capt=$_POST["capt"] != $_SESSION["capt"] OR $_SESSION["capt"]=='';
@@ -69,16 +70,25 @@ class Adminwebsite extends CI_Controller {
 					'password' => $temp[0]['password'],
 					'capt' => $temp[0]['capt']
 				);
-				$this->session->set_userdata('login',$data);
-				if(!isset($_SESSION)) { session_start();  } 
-				$_SESSION['kcfinder_mati'] = false;				
-				header('location:'.base_url().'index.php/adminwebsite/');
-			}else{
-				header('location:'.base_url().'index.php/adminwebsite/login/0');
+			$this->session->set_userdata('application\views\adminwebsite\login',$data);
+				redirect("application\views\adminwebsite\login");
 			}
-		}else{
-			$this->load->view('adminwebsite/pagenotfound',array('title' => 'Dasboard admin Koperasi ITS'));
-		}
+			if($capt){
+				echo "<SCRIPT LANGUAGE='JavaScript'>
+				window.alert('Captcha salah yang anda inputkan salah !!')
+				window.location.href='". base_url()."index.php/adminwebsite';
+				</SCRIPT>";
+				//redirect(website);
+			}
+			else{		
+				echo "<SCRIPT LANGUAGE='JavaScript'>
+				window.alert('No Anggota atau Password Anda Salah !!')
+				window.location.href='". base_url()."index.php/adminwebsite';
+				</SCRIPT>";
+			}
+			}else{
+				$this->load->view('adminwebsite/pagenotfound',array('title' => 'page not found'));
+			}
 	}
 	
 	function newcontent(){
@@ -424,9 +434,9 @@ class Adminwebsite extends CI_Controller {
 	function saveuser(){
 		////$this->cek_session();
 		if($_POST){
-			$username = $_POST['username'];
+			$username = mysql_real_escape_string($_POST['username']);
 			$pengguna = $_POST['pengguna'];
-			$password = $_POST['password'];
+			$password = mysql_real_escape_string(md5,$_POST['password']);
 			$facebook = $_POST['facebook'];
 			$twitter = $_POST['twitter'];
 			$g_plus = $_POST['g_plus'];
@@ -661,13 +671,13 @@ class Adminwebsite extends CI_Controller {
 			$data_sess = $this->session->userdata('login');
 			
 			$kode_user = $_POST['kode_user'];
-			$username = $_POST['username'];
+			$username = mysql_real_escape_string($_POST['username']);
 			$nama_lengkap = $_POST['nama_lengkap'];
 			$facebook = $_POST['facebook'];
 			$g_plus = $_POST['g_plus'];
 			$twitter = $_POST['twitter'];
 			$about = $_POST['about'];
-			$password = $_POST['password'];
+			$password = mysql_real_escape_string(md5,$_POST['password']);
 			
 			if($password == $data_sess['password']){
 				$data = array(
