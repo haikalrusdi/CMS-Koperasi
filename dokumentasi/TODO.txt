@@ -6,16 +6,9 @@ Selesai Bekerja, Tuliskan To Do List Di Sini
 
 ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa tulis nama dan nrp anda, serta tanggal dan jam anda menuliskan todo ini
 
-hayoo, nggak bisa yaa. di edit lagi yaa
-aku bisa lhoo
 
-<<<<<<< HEAD
-18. baru saja di edit lagi dengan kalimat ini
-
-=======
-
+19. create branch edited lagi by dedy
 18. edited lagi by dedy puji. follow ig @dedthing
->>>>>>> f726d79ff622a154fb67bff4a98a31955c412fae
 17. Baru saja di edit dengan kalimat ini
 
 <<<<<<< HEAD
