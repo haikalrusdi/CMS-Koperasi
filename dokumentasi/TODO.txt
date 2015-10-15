@@ -6,8 +6,6 @@ Selesai Bekerja, Tuliskan To Do List Di Sini
 
 ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa tulis nama dan nrp anda, serta tanggal dan jam anda menuliskan todo ini
 
-24. Andre dan TOmo SUKSES>>>>>
-
 23. Kevin Setiawan (5213100108) & Achsanul Kamal (5213100146) 15/10/2015 (13.00-14.00)
 Membantu menyelesaian validasi captcha. Programmer selanjutnya melanjutkan pop-up message ketika user yang login salah memasukkan captcha ataupun username dan password. Untuk mengamankan dapat memberikan keamanan untuk sql injection dll.
 
