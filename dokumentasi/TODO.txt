@@ -4,7 +4,7 @@ Selesai Bekerja, Tuliskan To Do List Di Sini
 ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa tulis nama dan nrp anda, serta tanggal dan jam anda menuliskan todo ini
 
 
-
+19. create branch
 18. edited lagi by dedy puji. follow ig @dedthing
 17. Baru saja di edit dengan kalimat ini
 
