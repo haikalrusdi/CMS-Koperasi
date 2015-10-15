@@ -5,8 +5,10 @@ ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa
 
 
 
-
-
+17. Andre Firmansyah (5213100032) & Nimas Nawangsih (5213100100)
+Menambahkan code program pada controller dan view pada folder application untuk menjalankan captcha code ignitier.
+Namun belum berhasil menampilkan gambar captcha berupa karakter random dan validasinya.
+Programmer selanjutnya tugasnya membuat captcha dengan karakter random dan background bebas
 
 16. Rizky Ryandhi (5213100112) & M Hanif Rusdiansyah (5213100120)
 menambahkan pesan kalau salah memasukan captcha, tapi blm bisa validasi karena kesulitan mencari variable captcha. 
