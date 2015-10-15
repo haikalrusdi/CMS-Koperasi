@@ -8,6 +8,10 @@ ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa
 
 17. Baru saja di edit dengan kalimat ini
 
+<<<<<<< HEAD
+=======
+17. edited by dedy puji . follow ig @dedthing
+>>>>>>> 2433e3e6795b1b075275d4d1d266364810a4c87f
 16. Rizky Ryandhi (5213100112) & M Hanif Rusdiansyah (5213100120)
 menambahkan pesan kalau salah memasukan captcha, tapi blm bisa validasi karena kesulitan mencari variable captcha. 
 validasi masih belum bisa
