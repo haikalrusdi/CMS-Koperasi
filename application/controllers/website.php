@@ -141,9 +141,9 @@ class Website extends CI_Controller {
 	
 	function ajaxcaptcha($kode = 0){
 		$vals = array(
-			'img_path' => 'captcha/',
-			'img_url' => '..\captcha\1435119411.85.jpg',
-			'font_path' => 'system/font/texb.ttf',
+			'img_path' => './captcha/',
+			'img_url' => base_url().'captcha/',
+			'font_path' => base_url().'system/font/texb.ttf',
 			'img_width' => 200,
 			'img_height' => 60,
 			'word_length' => 8,

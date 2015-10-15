@@ -1,15 +1,28 @@
+akhir 23
+pualing
+
 Selesai Bekerja, Tuliskan To Do List Di Sini 
 (TULIS SECARA DETAIL APA2 SAJA UNTUK DIKERJAKAN/DILANJUTKAN OLEH PROGRAMMER BERIKUTNYA)
 
 ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa tulis nama dan nrp anda, serta tanggal dan jam anda menuliskan todo ini
 
 
+19. create branch edited lagi by dedy
+18. edited lagi by dedy puji. follow ig @dedthing
+17. Baru saja di edit dengan kalimat ini
 
+<<<<<<< HEAD
 17. Andre Firmansyah (5213100032) & Nimas Nawangsih (5213100100)
 Menambahkan code program pada controller dan view pada folder application untuk menjalankan captcha code ignitier.
 Namun belum berhasil menampilkan gambar captcha berupa karakter random dan validasinya.
 Programmer selanjutnya tugasnya membuat captcha dengan karakter random dan background bebas
 
+=======
+<<<<<<< HEAD
+=======
+17. edited by dedy puji . follow ig @dedthing
+>>>>>>> 2433e3e6795b1b075275d4d1d266364810a4c87f
+>>>>>>> c01fa9861da0c4932c68a6a904d57c48c2560050
 16. Rizky Ryandhi (5213100112) & M Hanif Rusdiansyah (5213100120)
 menambahkan pesan kalau salah memasukan captcha, tapi blm bisa validasi karena kesulitan mencari variable captcha. 
 validasi masih belum bisa
