@@ -34,10 +34,6 @@ class Login extends CI_Controller {
 			$password = strip_tags($password);
 			$capt = $_POST["captcha"] != $_SESSION["capt"] OR $_SESSION["capt"]==''; 
 			
-			if($capt){
-				redirect(website);
-			}			
-			
 			$temp = $this->m_koperasi->GetAnggota("where no_anggota = '$no_anggota' and password = md5('$password')")->result_array();
 			if($temp != NULL){
 				$data = array(
@@ -49,7 +45,15 @@ class Login extends CI_Controller {
 				);
 				$this->session->set_userdata('login',$data);
 				redirect("login");
-			}else{		
+			}
+			if($capt){
+				echo "<SCRIPT LANGUAGE='JavaScript'>
+				window.alert('Captcha salah yang anda inputkan salah !!')
+				window.location.href='". base_url()."index.php/website';
+				</SCRIPT>";
+				//redirect(website);
+			}
+			else{		
 				echo "<SCRIPT LANGUAGE='JavaScript'>
 				window.alert('No Anggota atau Password Anda Salah !!')
 				window.location.href='". base_url()."index.php/website';
