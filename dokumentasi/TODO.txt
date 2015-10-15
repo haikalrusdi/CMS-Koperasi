@@ -6,6 +6,8 @@ Selesai Bekerja, Tuliskan To Do List Di Sini
 
 ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa tulis nama dan nrp anda, serta tanggal dan jam anda menuliskan todo ini
 
+26. teeestestes
+
 25. Tomo Andre
 
 23. Kevin Setiawan (5213100108) & Achsanul Kamal (5213100146) 15/10/2015 (13.00-14.00)
