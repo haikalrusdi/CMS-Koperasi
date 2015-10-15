@@ -6,6 +6,9 @@ Selesai Bekerja, Tuliskan To Do List Di Sini
 
 ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa tulis nama dan nrp anda, serta tanggal dan jam anda menuliskan todo ini
 
+22. Siti Oryza Khairunnisa (5213100100) & Achsanul Kamal (5213100146)
+Kamis, 15 Oktober 2015 (12.00-13.00)
+Gambar Captcha dan validasi sudah bisa. Ketika benar memasukkan captcha username dan password maka akan masuk ke dalam halaman home anggota, sedangkan ketika captcha salah masih redirect ke webseite awal. Programmer selanjutnya bisa menambahkan pop-up message ketika captcha yang diinputkan salah atau memberikan keamanan untuk sql injection dll. 
 21. Umar Al Aqsho (5213100107) & Ramadhan Pratama Budiman (5213100015) 15/Oktober/2015 (10.00 -12.00)
 mengedit website.php mengganti base url pada captcha. belum bisa validasi captcha. untuk programer selanjutnya buat agar captcha berhasil.
 20. Andre Firmansyah (5213100032) & Nimas Nawangsih (5213100100)
