@@ -4,7 +4,7 @@ Selesai Bekerja, Tuliskan To Do List Di Sini
 ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa tulis nama dan nrp anda, serta tanggal dan jam anda menuliskan todo ini
 
 
-
+18. baru saja di edit lagi dengan kalimat ini
 
 17. Baru saja di edit dengan kalimat ini
 
