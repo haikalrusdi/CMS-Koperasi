@@ -6,6 +6,8 @@ Selesai Bekerja, Tuliskan To Do List Di Sini
 
 ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa tulis nama dan nrp anda, serta tanggal dan jam anda menuliskan todo ini
 
+27. Chitra test
+
 26. teeestestes
 
 25. Tomo Andre
