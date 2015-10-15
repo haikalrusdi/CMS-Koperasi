@@ -5,7 +5,8 @@ Selesai Bekerja, Tuliskan To Do List Di Sini
 
 ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa tulis nama dan nrp anda, serta tanggal dan jam anda menuliskan todo ini
 
-hayoo, nggak bisa yaa
+hayoo, nggak bisa yaa. di edit lagi yaa
+aku bisa lhoo
 
 <<<<<<< HEAD
 18. baru saja di edit lagi dengan kalimat ini
