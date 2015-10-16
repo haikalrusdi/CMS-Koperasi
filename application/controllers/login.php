@@ -36,6 +36,17 @@ class Login extends CI_Controller {
 			$password = strip_tags($password);
 			$capt = $_POST["captcha"] != $_SESSION["capt"] OR $_SESSION["capt"]==''; 
 			
+			if($_SESSION["capt"]==$_POST["captcha"]){
+				echo "<script>alert('Berhasil Kode CAPTCHA valid!')</script>";
+				}else{
+				echo "<script>alert('Kode CAPTCHA tidak valid!')</script>";
+				/*echo "<SCRIPT LANGUAGE='JavaScript'>
+				window.alert('Captcha yang anda inputkan salah !!')
+				window.location.href='". base_url()."index.php/website';
+				</SCRIPT>";*/
+				//redirect(website);
+			}
+			
 			$temp = $this->m_koperasi->GetAnggota("where no_anggota = '$no_anggota' and password = md5('$password')")->result_array();
 			$result=mysql_query($temp);
 			$sSuccessMsg = ($count>0?
@@ -52,13 +63,7 @@ class Login extends CI_Controller {
 				$this->session->set_userdata('login',$data);
 				redirect("login");
 			}
-			if($capt){
-				echo "<SCRIPT LANGUAGE='JavaScript'>
-				window.alert('Captcha yang anda inputkan salah !!')
-				window.location.href='". base_url()."index.php/website';
-				</SCRIPT>";
-				//redirect(website);
-			}
+			
 			else{		
 				echo "<SCRIPT LANGUAGE='JavaScript'>
 				window.alert('No Anggota atau Password Anda Salah !!')

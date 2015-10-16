@@ -49,8 +49,9 @@
 			  <form method="post" action="<?php echo base_url(); ?>index.php/login/saran_kritik">
 				<input type="text" name="kritik" placeholder="kritik">
 				<input type="text" name="saran" placeholder="saran">
-				<img src="1435119411.85.jpeg?rand=<?php echo rand(); ?>"
-				id = "captchaing">
+				<!--<img src="1435119411.85.jpeg?rand=<?php echo rand(); ?>"
+				id = "captchaing">-->
+				<img src="http://localhost/CMS-Koperasi/index.php/captcha" width="214px" alt="captcha">
 				<label for="message">Masukkan kode diatas :</label>
 				<input id="6_letters_code" name="6_letters_code" type="text">
 				<input type="submit" name="login" value="submit">

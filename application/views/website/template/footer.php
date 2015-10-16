@@ -11,8 +11,7 @@
 			<input type="text" name="nama anda" placeholder="nama anda">
 			<input type="text" name="perihal komentar" placeholder="perihal komentar">
 			<input type="text" name="masukkan komentar" placeholder="masukkan komentar">
-			<img src="1435119411.85.jpeg?rand=<?php echo rand(); ?>"
-			id="captchaimg" >
+			<img src="http://localhost/CMS-Koperasi/index.php/captcha" width="214px" alt="captcha">
             <p><input type="text" name="captcha" value="" placeholder="Masukan kode diatas" required></p>
 			<input type="submit" value="submit komentar">
 		  </form> 
