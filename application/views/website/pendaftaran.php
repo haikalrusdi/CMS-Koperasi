@@ -12,28 +12,34 @@
 <td><input name="nama" placeholder="Nama" type="text" required width="100px;"></td>
 </tr>
 <tr><th>N I P / N I P H  :</th>
-<td><input name="nip" placeholder="NIP NIPH" type="text"  width="100px;"></td>
+<td><input name="nip" placeholder="NIP NIPH" type="text" required width="100px;"></td>
 </tr>
 <tr><th>Unit Kerja  :</th>
-<td><input name="unit_kerja" placeholder="Unit Kerja" type="text" width="100px;"></td>
+<td><input name="unit_kerja" placeholder="Unit Kerja" type="text" required width="100px;"></td>
 </tr>
 <tr><th>Tempat Lahir  :</th>
-<td><input name="tempat_lahir" placeholder="Tempat Lahir" type="text" width="60px;"></td>
+<td><input name="tempat_lahir" placeholder="Tempat Lahir" type="text" required width="60px;"></td>
 </tr>
 <tr><th>Tanggal Lahir  :</th>
 <td><input type="text" name="tgl_lahir" id="tgl_lahir" placeholder="Klik disini Untuk menampilkan tanggal" value="" /></td>
 </tr>
 <tr><th>Pangkat / Gol (PNS)  :</th>
-<td><input name="pangkat" placeholder="Pangkat / Gol (PNS)" type="text" width="100px;"></td>
+<td><select name="pangkat" placeholder="Pangkat / Gol (PNS)" type="text" width="100px;">
+   <option value="blank" selected="selected"> </option>
+   <option value="I">I</option>
+   <option value="II">II</option>
+   <option value="III">III</option>
+   <option value="IV">IV</option>
+</select></td>
 </tr>
-<tr><th>No. HP / Telpn.  :</th>
-<td><input name="telepon" placeholder="No. HP / Telepon" type="text" width="100px;"></td>
+<tr><th>No. HP / Telepon  :</th>
+<td><input name="telepon" placeholder="No. HP / Telepon" type="text" required width="10px;"></td>
 </tr>
 <tr><th>Email  :</th>
-<td><input name="email" placeholder="Email" type="text" width="100px;"></td>
+<td><input name="email" placeholder="Email" type="text" required width="100px;"></td>
 </tr>
 <tr><th>Alamat  :</th>
-<td><input name="alamat" placeholder="Alamat" type="text" width="100px;"></td>
+<td><input name="alamat" placeholder="Alamat" type="text" required width="100px;"></td>
 </tr>
 <!--<tr><th>Tanggal Menjadi Anggota  :</th>
 <td><input name="tgl_bergabung" placeholder="" type="text" width="100px;"></td>

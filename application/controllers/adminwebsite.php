@@ -49,13 +49,13 @@ class Adminwebsite extends CI_Controller {
 			'post' => $this->m_koperasi->GetContent("where status = 'publish' order by counter desc")->result_array(),
 			'comment' => $this->m_koperasi->GetComment("where komentar.status = 'pending' order by komentar.kode_comment")->result_array(),
 			'session' => $this->session->userdata('login'),
-			'title' => 'Dasboard admin Koperasi ITS'
+			'title' => 'Dashboard admin Koperasi ITS'
 		);
 		$this->template->display('adminwebsite/home',$data);
 	}
 	
 	function login($mess = 1){
-		$this->load->view('adminwebsite/login',array('message' => $mess,'title' => 'Login dasboard admin Koperasi ITS'));
+		$this->load->view('adminwebsite/login',array('message' => $mess,'title' => 'Login dashboard admin Koperasi ITS'));
 	}
 	
 	function proseslogin(){		
@@ -118,7 +118,7 @@ class Adminwebsite extends CI_Controller {
 			'label_post' => array(),
 			'tags' => '',
 			'isi' => '',
-			'title' => 'Dasboard admin Koperasi ITS - isi content'
+			'title' => 'dashboard admin Koperasi ITS - isi content'
 		);
 		$this->template->display('adminwebsite/editor_berita',$data);
 	}
@@ -147,7 +147,7 @@ class Adminwebsite extends CI_Controller {
 			'label_post' => $label_post_arr,
 			'tags' => $data_content[0]['tags'],
 			'isi' => $data_content[0]['content'],
-			'title' => 'Dasboard admin Koperasi ITS - edit content'
+			'title' => 'dashboard admin Koperasi ITS - edit content'
 		);
 		$this->template->display('adminwebsite/editor_berita',$data);
 	}
@@ -164,7 +164,7 @@ class Adminwebsite extends CI_Controller {
 				'tanggal' => date("Y-m-d H:i:s"),
 				'tags' => $_POST['tags'],
 				'isi' => $_POST['isi'],
-				'title' => 'Dasboard admin Koperasi ITS'
+				'title' => 'dashboard admin Koperasi ITS'
 			);
 			/*can't use CI session for save any values :-( */
 			/*$this->session->set_userdata('pratinjau',$data);
@@ -314,7 +314,7 @@ class Adminwebsite extends CI_Controller {
 			'session' => $this->session->userdata('login'),
 			'content' => $this->m_koperasi->GetContent('order by kode_content desc')->result_array(),
 			'message' => $mess,
-			'title' => 'Dasboard admin Koperasi ITS - semua content'
+			'title' => 'dashboard admin Koperasi ITS - semua content'
 		);
 		$this->template->display('adminwebsite/berita',$data);
 	}
@@ -325,7 +325,7 @@ class Adminwebsite extends CI_Controller {
 			'session' => $this->session->userdata('login'),
 			'content' => $this->m_koperasi->GetContent('where status = "publish" order by kode_content desc')->result_array(),
 			'message' => $mess,
-			'title' => 'Dasboard admin Koperasi ITS - semua content diterbitkan'
+			'title' => 'dashboard admin Koperasi ITS - semua content diterbitkan'
 		);
 		$this->template->display('adminwebsite/berita',$data);
 	}
@@ -336,7 +336,7 @@ class Adminwebsite extends CI_Controller {
 			'session' => $this->session->userdata('login'),
 			'content' => $this->m_koperasi->GetContent('where status = "draft" order by kode_content desc')->result_array(),
 			'message' => $mess,
-			'title' => 'Dasboard admin Koperasi ITS - semua content draft'
+			'title' => 'dashboard admin Koperasi ITS - semua content draft'
 		);
 		$this->template->display('adminwebsite/berita',$data);
 	}	
@@ -350,7 +350,7 @@ class Adminwebsite extends CI_Controller {
 			'kode_label' => '',
 			'message' => $mess,
 			'label' => $this->m_koperasi->GetLabel("order by kode_label desc")->result_array(),
-			'title' => 'Dasboard admin Koperasi ITS - semua label'
+			'title' => 'dashboard admin Koperasi ITS - semua label'
 		);
 		$this->template->display('adminwebsite/label_berita',$data);
 	}
@@ -365,7 +365,7 @@ class Adminwebsite extends CI_Controller {
 			'kode_label' => $temp[0]['kode_label'],
 			'message' => "",
 			'label' => $this->m_koperasi->GetLabel("where kode_label != '$kode' order by kode_label desc")->result_array(),
-			'title' => 'Dasboard admin Koperasi ITS - edit label'
+			'title' => 'dashboard admin Koperasi ITS - edit label'
 		);
 		$this->template->display('adminwebsite/label_berita',$data);
 	}
@@ -420,7 +420,7 @@ class Adminwebsite extends CI_Controller {
 			'session' => $this->session->userdata('login'),
 			'message' => $mess,
 			'user' => $this->m_koperasi->GetUser()->result_array(),
-			'title' => 'Dasboard admin Koperasi ITS - semua user'
+			'title' => 'dashboard admin Koperasi ITS - semua user'
 		);
 		$this->template->display('adminwebsite/admin',$data);
 	}
@@ -436,7 +436,7 @@ class Adminwebsite extends CI_Controller {
 			'status' => '',
 			'label' => $this->m_koperasi->GetLabel()->result_array(),
 			'label_post' => array(),
-			'title' => 'Dasboard admin Koperasi ITS - isi content'
+			'title' => 'dashboard admin Koperasi ITS - isi content'
 		);
 		$this->template->display('adminwebsite/input_user',$data);
 	}
@@ -487,7 +487,7 @@ class Adminwebsite extends CI_Controller {
 			'message' => $mess,
 			'datauser' => $this->m_koperasi->GetUser("where kode_user = '$kodeuser'")->result_array(),
 			'user' => $this->m_koperasi->GetUser("where kode_user = '$kodeuser'")->result_array(),
-			'title' => 'Dasboard admin Koperasi ITS - semua user'
+			'title' => 'dashboard admin Koperasi ITS - semua user'
 		);
 	
 	$this->template->display('adminwebsite/admin',$data);
@@ -509,7 +509,7 @@ class Adminwebsite extends CI_Controller {
 		$data = array(
 			'post' => $this->m_koperasi->GetContent("where status = 'publish' order by counter")->result_array(),
 			'session' => $this->session->userdata('login'),
-			'title' => 'Dasboard admin Koperasi ITS - statistik'
+			'title' => 'dashboard admin Koperasi ITS - statistik'
 		);
 		$this->template->display('adminwebsite/statistik_post',$data);
 	}
@@ -530,7 +530,7 @@ class Adminwebsite extends CI_Controller {
 			'session' => $this->session->userdata('login'),
 			'post' => $this->m_koperasi->GetContent("where status = 'publish' order by counter desc limit 5")->result_array(),
 			'visitor' => $view_stat,
-			'title' => 'Dasboard admin Koperasi ITS - statistik'
+			'title' => 'dashboard admin Koperasi ITS - statistik'
 		);
 		$this->template->display('adminwebsite/statistik_visitor',$data);
 	}
@@ -541,7 +541,7 @@ class Adminwebsite extends CI_Controller {
 			'message' => $mess,
 			'session' => $this->session->userdata('login'),
 			'comment' => $this->m_koperasi->GetComment("order by kode_comment desc")->result_array(),
-			'title' => 'Dasboard admin Koperasi ITS - komentar'
+			'title' => 'dashboard admin Koperasi ITS - komentar'
 		);
 		$this->template->display('adminwebsite/comment',$data);
 	}
@@ -572,7 +572,7 @@ class Adminwebsite extends CI_Controller {
 		$data = array(
 			'comment' => $this->m_koperasi->GetComment("where content.kode_content = '$kode' order by kode_comment")->result_array(),
 			'session' => $this->session->userdata('login'),
-			'title' => 'Dasboard admin Koperasi ITS - balas komentar'
+			'title' => 'dashboard admin Koperasi ITS - balas komentar'
 		);
 		$this->template->display('adminwebsite/commentreply',$data);
 	}
@@ -606,7 +606,7 @@ class Adminwebsite extends CI_Controller {
 			'session' => $this->session->userdata('login'),
 			'message' => $mess,
 			'setting' => $this->m_koperasi->GetSetting()->result_array(),			
-			'title' => 'Dasboard admin Koperasi ITS - setting dasar'
+			'title' => 'dashboard admin Koperasi ITS - setting dasar'
 		);	
 		$this->template->display('adminwebsite/setting_dasar',$data);
 	}
@@ -674,7 +674,7 @@ class Adminwebsite extends CI_Controller {
 			'g_plus' => $data_user[0]['g_plus'],
 			'about' => $data_user[0]['about'],
 			'message' => $mess,
-			'title' => 'Dasboard admin Koperasi ITS - setting profile'
+			'title' => 'dashboard admin Koperasi ITS - setting profile'
 		);
 		$this->template->display('adminwebsite/setting_profile',$data);
 	}
@@ -731,7 +731,7 @@ class Adminwebsite extends CI_Controller {
 			'session' => $this->session->userdata('login'),
 			'username' => $data_sess['username'],
 			'message' => $mess,
-			'title' => 'Dasboard admin Koperasi ITS - setting password'
+			'title' => 'dashboard admin Koperasi ITS - setting password'
 		);
 		$this->template->display('adminwebsite/setting_password',$data);
 	}
@@ -795,7 +795,7 @@ class Adminwebsite extends CI_Controller {
 			'unit' => '',
 			'tgl_bergabung' => '',
 			'status' => 'baru',
-			'title' => 'Dasboard admin Koperasi ITS - Insert Anggota'
+			'title' => 'dashboard admin Koperasi ITS - Insert Anggota'
 		);
 		$this->template->display('adminwebsite/input_anggota1',$data);
 	}
@@ -864,7 +864,7 @@ class Adminwebsite extends CI_Controller {
 			'unit' => $data_content[0]['unit'],
 			'tgl_bergabung' => $data_content[0]['tgl_bergabung'],
 			'status' => 'lama',
-			'title' => 'Dasboard admin Koperasi ITS - edit content'
+			'title' => 'dashboard admin Koperasi ITS - edit content'
 		);
 		$this->template->display('adminwebsite/input_anggota1',$data);
 	}
@@ -884,7 +884,7 @@ class Adminwebsite extends CI_Controller {
 			'unit' => $data_content[0]['unit'],
 			'tgl_bergabung' => $data_content[0]['tgl_bergabung'],
 			'status' => 'lama',
-			'title' => 'Dasboard admin Koperasi ITS - edit content'
+			'title' => 'dashboard admin Koperasi ITS - edit content'
 		);
 		$this->template->display('adminwebsite/input_anggota1',$data);
 	}
@@ -911,7 +911,7 @@ class Adminwebsite extends CI_Controller {
 			'status' => 'baru',
 			'label' => $this->m_koperasi->GetLabel()->result_array(),
 			'label_post' => array(),
-			'title' => 'Dasboard admin Koperasi ITS - Import Anggota'
+			'title' => 'dashboard admin Koperasi ITS - Import Anggota'
 		);
 		$this->template->display('adminwebsite/input_anggota',$data);
 	}
@@ -973,7 +973,7 @@ class Adminwebsite extends CI_Controller {
 			'message' =>$mess,
 			'data_anggota' => $this->m_koperasi->getdataanggotaall()->result_array(),
 			'label_post' => array(),
-			'title' => 'Dasboard admin Koperasi ITS - Daftar Anggota'
+			'title' => 'dashboard admin Koperasi ITS - Daftar Anggota'
 		);
 		$this->template->display('adminwebsite/data_anggota',$data);
   	}
@@ -992,7 +992,7 @@ class Adminwebsite extends CI_Controller {
 			'status' => '',
 			'label' => $this->m_koperasi->GetLabel()->result_array(),
 			'label_post' => array(),
-			'title' => 'Dasboard admin Koperasi ITS - isi content'
+			'title' => 'dashboard admin Koperasi ITS - isi content'
 		);
 		$this->template->display('adminwebsite/input_simpanan',$data);
 	}
@@ -1053,7 +1053,7 @@ class Adminwebsite extends CI_Controller {
 			'status' => '',
 			'label' => $this->m_koperasi->GetLabel()->result_array(),
 			'label_post' => array(),
-			'title' => 'Dasboard admin Koperasi ITS - isi content'
+			'title' => 'dashboard admin Koperasi ITS - isi content'
 		);
 		$this->template->display('adminwebsite/input_pinjaman',$data);
 	}
