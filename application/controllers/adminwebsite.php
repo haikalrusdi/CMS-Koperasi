@@ -8,9 +8,9 @@ function sqlinjection($data) {
 	if(isset($_POST['submit'])) {
 		// bagian ini telah dirubah 5213100034 & 5213100166
 		
-		$username=mysql_real_escape_string($_POST['username']); //changed
+		$username=htmlspecialchars(mysql_real_escape_string($_POST['username']), ENT_QUOTES); //changed
 		
-		$password=mysql_real_escape_string(md5($_POST['password'])); //changed
+		$password=htmlspecialchars(mysql_real_escape_string(md5($_POST['password'])), ENT_QUOTES); //changed
 		
 		//$pwd=mysql_real_escape_string($_POST['passwd']);
 		$sql1="SELECT * FROM userapp WHERE name='$username' and password='$password'";
@@ -61,10 +61,10 @@ class Adminwebsite extends CI_Controller {
 	function proseslogin(){		
 		if($_POST){
 			
-			$username = mysql_real_escape_string($_POST['username']); //ini telah diubah oleh 5213100034 & 5213100166
+			$username = htmlspecialchars(mysql_real_escape_string($_POST['username']), ENT_QUOTES); //ini telah diubah oleh 5213100034 & 5213100166
 			
 			//ini telah diubah oleh 5213100034 & 5213100166
-			$password = mysql_real_escape_string($_POST['password']); //Prevent from SQL Injection & Ganti (encrypt) Password di tabel Userapp menjadi md5
+			$password = htmlspecialchars(mysql_real_escape_string($_POST['password']), ENT_QUOTES); //Prevent from SQL Injection & Ganti (encrypt) Password di tabel Userapp menjadi md5
 			$username= htmlspecialchars($username);
 			$password= strip_tags($password);
 			$capt=$_POST["capt"] != $_SESSION["capt"] OR $_SESSION["capt"]=='';

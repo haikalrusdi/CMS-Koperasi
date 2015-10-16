@@ -6,7 +6,7 @@ session_start();
 header("Content-type: image/png");
 
 // beri nama session dengan nama Captcha
-$_SESSION["Captcha"]="";
+$_SESSION["captcha"]="";
 
 //tentukan ukuran gambar
 $gbr = imagecreate(200, 50);

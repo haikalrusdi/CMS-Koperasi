@@ -29,17 +29,21 @@ class Login extends CI_Controller {
 	function masuk(){
 		if($_POST){
 			
-			$no_anggota = mysql_real_escape_string($_POST['no_anggota']); //ini telah diubah oleh 5213100034 & 5213100166
+			$no_anggota = htmlspecialchars(mysql_real_escape_string($_POST['no_anggota']), ENT_QUOTES); //ini telah diubah oleh 5213100034 & 5213100166 
 			
-			$password = mysql_real_escape_string($_POST['password'].$this->config->item("key_login")); //ini telah diubah oleh 5213100034 & 5213100166
+			$password = htmlspecialchars(mysql_real_escape_string($_POST['password'].$this->config->item("key_login")), ENT_QUOTES); //ini telah diubah oleh 5213100034 & 5213100166
 			$no_anggota = htmlspecialchars($no_anggota);
 			$password = strip_tags($password);
 			$capt = $_POST["captcha"] != $_SESSION["capt"] OR $_SESSION["capt"]==''; 
 			
 			$temp = $this->m_koperasi->GetAnggota("where no_anggota = '$no_anggota' and password = md5('$password')")->result_array();
+			$result=mysql_query($temp);
+			$sSuccessMsg = ($count>0?
+			"<div class=\"alert-box success\">Succesfully logged in.<a href=\"\" class=\"close\">&times;</a></div>":
+			"<div class=\"alert-box alert\">Wrong user name or password.<a href=\"\" class=\"close\">&times;</a></div>");
 			if($temp != NULL){
 				$data = array(
-					'logged_in' => 'yesGetMeLogin',
+					//'logged_in' => 'yesGetMeLogin',
 					'no_anggota' => $temp[0]['no_anggota'],
 					'pengguna' => $temp[0]['nama'],
 					'password' => $temp[0]['password'],
@@ -50,7 +54,7 @@ class Login extends CI_Controller {
 			}
 			if($capt){
 				echo "<SCRIPT LANGUAGE='JavaScript'>
-				window.alert('Captcha salah yang anda inputkan salah !!')
+				window.alert('Captcha yang anda inputkan salah !!')
 				window.location.href='". base_url()."index.php/website';
 				</SCRIPT>";
 				//redirect(website);
