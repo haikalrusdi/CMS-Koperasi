@@ -7,6 +7,7 @@ Selesai Bekerja, Tuliskan To Do List Di Sini
 ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa tulis nama dan nrp anda, serta tanggal dan jam anda menuliskan todo ini
 
 <<<<<<< HEAD
+28. Adi Satria (5213100180) & Hisyam Naufal Gandhi (5213100114) 16/10/2015 (10:00 - 11:00) Memperbaiki fitur ganti password
 
 27. Adi Satria (5213100180) & Hisyam Naufal Gandhi (5213100114) 16/10/2015 (09:00 - 10:00) Memperbaiki captcha yang pada awalnya tidak tampil
 

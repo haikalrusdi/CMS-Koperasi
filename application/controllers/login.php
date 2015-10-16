@@ -148,7 +148,7 @@ class Login extends CI_Controller {
 				$password_lama = $_POST['password_lama'].$this->config->item("key_login");
 				$password_baru = $_POST['password_baru'].$this->config->item("key_login");
 				$temp = $this->m_koperasi->GetAnggota("where sha1(no_anggota) = '$id' and password = '$password_lama'")->result_array();
-				if ( $temp != NULL ) {
+				if ( $temp != $password_lama ) {
 					$result = $this->m_koperasi->UbahPassAnggota( $id, $password_baru );
 					if ( $result == 1 ) {
 						echo "<SCRIPT LANGUAGE='JavaScript'>
