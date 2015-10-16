@@ -7,6 +7,13 @@ Selesai Bekerja, Tuliskan To Do List Di Sini
 ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa tulis nama dan nrp anda, serta tanggal dan jam anda menuliskan todo ini
 
 <<<<<<< HEAD
+
+
+26. M. Yusuf Habibi (5213100039) & Sasongko Kurniawan (5213100019) 15/10/2015 (17:00-18:00) Masih mencoba-coba mengedit login controller untuk validasi captcha dan menambahkan file gambar.php dan hasil.php yang mungkin saja bisa berhasil. Namun masih tetap belum berhasil menyeleksi apabila captcha yang dimasukkan tidak sesuai. Untuk pop-up message ketika user yang login salah memasukkan captcha ataupun username dan password juga masih belum berhasil. 
+
+25. Sasongko Kurniawan (5213100019) & Ahmad Fikri (5213100154) 15/10/2015 (16:00-17:00)
+Mencoba-coba mengedit login controller untuk validasi captcha. Namun masih belum berhasil menyeleksi apabila captcha yang dimasukkan tidak sesuai. Untuk pop-up message ketika user yang login salah memasukkan captcha ataupun username dan password juga belum berhasil. Untuk programmer selanjutnya tetep semangat menyelesaikan validasi captcha.
+
 24. Pandu Satrio (5213100034) & Anindya Astri Garini (5213100166) 15/10/2015 (14:00-16:00)
 
 Menambahkan SQL Injection di beberapa class (login.php dan adminwebsite.php) dan Mengganti session pada login adminwebsite.
