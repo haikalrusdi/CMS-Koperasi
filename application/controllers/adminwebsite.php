@@ -61,6 +61,7 @@ class Adminwebsite extends CI_Controller {
 	function proseslogin(){		
 		if($_POST){
 			
+			
 			$username = htmlspecialchars(mysql_real_escape_string($_POST['username']), ENT_QUOTES); //ini telah diubah oleh 5213100034 & 5213100166  dan 5213100177 & 5213100193 menambahkan code ENT_QUOTES
 			
 			//ini telah diubah oleh 5213100034 & 5213100166  dan 5213100177 & 5213100193 menambahkan code ENT_QUOTES
