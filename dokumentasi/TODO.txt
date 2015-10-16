@@ -8,6 +8,7 @@ ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa
 
 <<<<<<< HEAD
 
+27. Adi Satria (5213100180) & Hisyam Naufal Gandhi (5213100114) 16/10/2015 (09:00 - 10:00) Memperbaiki captcha yang pada awalnya tidak tampil
 
 26. M. Yusuf Habibi (5213100039) & Sasongko Kurniawan (5213100019) 15/10/2015 (17:00-18:00) Masih mencoba-coba mengedit login controller untuk validasi captcha dan menambahkan file gambar.php dan hasil.php yang mungkin saja bisa berhasil. Namun masih tetap belum berhasil menyeleksi apabila captcha yang dimasukkan tidak sesuai. Untuk pop-up message ketika user yang login salah memasukkan captcha ataupun username dan password juga masih belum berhasil. 
 

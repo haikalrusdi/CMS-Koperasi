@@ -4,20 +4,17 @@
 			<div class="clearfix"> </div>
 		  </ul>
 		  <div class="login">
-			  <form method="post" action="<?php echo base_url(); ?>index.php/login/masuak">
+			  <form method="post" action="<?php echo base_url(); ?>index.php/login/masuk">
 				<p><input type="text" name="no_anggota" value="" placeholder="No Anggota"></p>
 				<p><input type="password" name="password" value="" placeholder="Password"></p>
-				<p><img src="<?php echo base_url(); ?>index.php/captcha" width="214px" alt="captcha"></p>
-				<p><input type="text" name="captcha" value="" placeholder="Masukan kode diatas" required></p>
+				<p style="font-size: small">Captcha</p>
+                <p><img src="<?php echo base_url(); ?>index.php/captcha" width="214px" alt="captcha"></p>
+				<p><input type="text" name="captcha" value="" placeholder="Masukkan captcha diatas" required></p>
 				
 				
 				<p class="submit">
 				
 				<input type="submit" name="login" value="Login"></p>
-
-
-				
-
 
 			  </form>
 		  </div>

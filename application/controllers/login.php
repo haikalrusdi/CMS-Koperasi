@@ -26,7 +26,7 @@ class Login extends CI_Controller {
 				</SCRIPT>";
 	}
 	}
-	function masuak(){		
+	function masuk(){
 		if($_POST){
 			
 			$no_anggota = mysql_real_escape_string($_POST['no_anggota']); //ini telah diubah oleh 5213100034 & 5213100166
