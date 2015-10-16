@@ -7,6 +7,9 @@ Selesai Bekerja, Tuliskan To Do List Di Sini
 ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa tulis nama dan nrp anda, serta tanggal dan jam anda menuliskan todo ini
 
 <<<<<<< HEAD
+29. Kevin Setiawan (5213100108) & Ashma Hanifah (5213100076) 16/10/2015 (14-15.00)
+Memperbaiki validasi captcha ketika menginputkan salah, dan menjadikan captcha dapat digunakan pada kolom keritik dan komentar serta komen. untuk programer selanjutnya dapat membuat captcha agar random disetiap kolomnya, dan membuat adminwebsite dapat mempost berita
+
 28. Adi Satria (5213100180) & Hisyam Naufal Gandhi (5213100114) 16/10/2015 (10:00 - 11:00) Memperbaiki fitur ganti password
 
 28. Jockey Satria Wiaya (5213100177) & Chitra Utami Putri (5213100193)
