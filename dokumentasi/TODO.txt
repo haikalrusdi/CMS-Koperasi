@@ -7,6 +7,17 @@ Selesai Bekerja, Tuliskan To Do List Di Sini
 ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa tulis nama dan nrp anda, serta tanggal dan jam anda menuliskan todo ini
 
 <<<<<<< HEAD
+29. Tesar Akram P. (5213100097) & Caesar Fajriansah (5213100179)
+UPDATE:
+- Memberikan pembenaran pada penulisan dan konten yang salah
+- Memberikan alert pada kolom Member Area saat kolom Unit Kerja, Tempat Lahir, No. Hp, Email, dan Alamat tidak diisi, yang sebelumnya hanya terdapat di kolom Nama
+- Memberikan fitur drowdown pada kolom Pangkat/ Gol. di Member Area (namun tampilan belum sesuai kolom lainnya)
+- Memberikan gambar pada Captcha di kolom Kritik dan Saran pada halaman utama yang sebelumnya tidak muncul
+- Memindahkan tulisan di kolom captcha yaitu "Masukan kode diatas" menjadi di dalam kolom pengisian captcha
+MASIH PERLU REVISI :
+- Perbaikan fitur kolom dropdown pada kolom Pangkat/ Gol.
+- Perbaikan penempatan gambar captcha pada kolom Kritik dan Saran
+
 28. Adi Satria (5213100180) & Hisyam Naufal Gandhi (5213100114) 16/10/2015 (10:00 - 11:00) Memperbaiki fitur ganti password
 
 28. Jockey Satria Wiaya (5213100177) & Chitra Utami Putri (5213100193)
