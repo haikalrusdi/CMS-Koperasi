@@ -1,6 +1,41 @@
 <ul class="spinner1">
 			<i class="paperclip"> </i>
 			<li class="spinner_head"><h3>Berita</h3></li>
+			<html>
+<head>
+<title>Berita Online</title>
+<meta http-equiv="content-type"content="text/html;
+charset=UTF-8">
+<link href="style.css"rel="stylesheet"type="text/css">
+</head>
+<body>
+<div id="kanvas">
+ <div id="header">
+  <h1 align="center">SEPUTAR KPRI ITS</h1><br>
+  <h1 align="center"></h1><br>
+   <font size="+2"><center>Launching KPRI ITS</center></font>
+   <h1 align="center"></h1><br>
+  </div>
+<div id="menu">
+</div>
+            <div id="content">
+    <div class="deskripsi">
+<center>
+<img src="http://localhost/CMS-koperasi/asset/website/images/kopma.jpg" width="200"height="225">
+<p>KPRI ITS atau yang kepanjangannya adalah Koperasi Pegawai Republik Indonesia - Institut Teknologi Sepuluh Nopember Surabaya berlokasi di samping Gelanggang Olahraga (GOR) Bulutangkis ITS.</p>
+</center></div></div>
+<div id="sidebar">
+ <div class="deskripsi">
+</p>
+</div>
+</div>
+  <div style="clear:both"></div>
+  <div id="footer">
+   <p>Copyright &copy; 2015 Koperasi Pegawai Republik Indonesia</p>
+    </div>
+</div>
+  </body>
+  </html>
 			<div class="clearfix"> </div>
 		  </ul>
 			<div class="berita">

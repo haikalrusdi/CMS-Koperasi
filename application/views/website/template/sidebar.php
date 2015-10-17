@@ -7,7 +7,6 @@
 			  <form method="post" action="<?php echo base_url(); ?>index.php/login/masuk">
 				<p><input type="text" name="no_anggota" value="" placeholder="No Anggota"></p>
 				<p><input type="password" name="password" value="" placeholder="Password"></p>
-				<p style="font-size: small">Captcha</p>
                 <p><img src="<?php echo base_url(); ?>index.php/captcha" width="214px" alt="captcha"></p>
 				<p><input type="text" name="captcha" value="" placeholder="Masukkan captcha diatas" required></p>
 				
@@ -49,10 +48,7 @@
 			  <form method="post" action="<?php echo base_url(); ?>index.php/login/saran_kritik">
 				<input type="text" name="kritik" placeholder="kritik">
 				<input type="text" name="saran" placeholder="saran">
-				<!--<img src="1435119411.85.jpeg?rand=<?php echo rand(); ?>"
-				id = "captchaing">-->
 				<img src="http://localhost/CMS-Koperasi/index.php/captcha" width="214px" alt="captcha">
-				<label for="message">Masukkan kode diatas :</label>
 				<p><input type="text" name="captcha" value="" placeholder="Masukkan captcha diatas" required></p>
 				<input type="submit" name="login" value="submit">
 			  </form>
