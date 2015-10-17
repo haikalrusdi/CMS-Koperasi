@@ -13,7 +13,11 @@ class Captcha extends CI_Controller {
         $this->load->helper(array('form', 'url'));
     }
 	function index(){
-		$text = rand(10000,99999);
+	$string1="abcdefghijklmnopqrstuvwxyz";
+	$string2="1234567890";
+	$string=$string1.$string2;
+	$string= str_shuffle($string);
+		$text = substr($string,0,6);
 		$_SESSION['capt'] = $text;
 		$height = 25;
 		$width = 65; 

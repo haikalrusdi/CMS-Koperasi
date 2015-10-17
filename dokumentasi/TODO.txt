@@ -7,6 +7,13 @@ Selesai Bekerja, Tuliskan To Do List Di Sini
 ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa tulis nama dan nrp anda, serta tanggal dan jam anda menuliskan todo ini
 
 <<<<<<< HEAD
+34. Mochammad Yusuf habibi (5213100039) dan Ahmad Fikri Z (5213100154)
+jam 12.00 -13.00
+update
+-login fix (sebelumnya tidal bisa login dengan id dan pass yang benar)
+-captcha menampilkan kombinasi huruf dan angka
+-kolom berita fix dengan menambahkan gambar.
+
 33. TESAR AKRAM PRATAMA (5213100097) dan CAESAR FAJRIANSAH (5213100179)
 Jam 11.00-12.00
 UPDATE:

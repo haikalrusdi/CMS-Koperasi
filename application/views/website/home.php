@@ -21,7 +21,7 @@ charset=UTF-8">
     <div id="content">
     <div class="deskripsi">
 <center>
-<img src="http://localhost/CMS-koperasi/asset/website/images/kopma.jpg" width="200"height="225">
+<img src="http://localhost/CMS-koperasi/asset/website/images/kopma.jpg" width="500"height="223">
 <p>KPRI ITS atau yang kepanjangannya adalah Koperasi Pegawai Republik Indonesia - Institut Teknologi Sepuluh Nopember Surabaya berlokasi di samping Gelanggang Olahraga (GOR) Bulutangkis ITS.</p>
 <br><br><br><br><br><br><br><br><br><br>
 </center></div></div>

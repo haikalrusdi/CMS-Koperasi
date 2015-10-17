@@ -28,23 +28,27 @@ class Login extends CI_Controller {
 	}
 	function masuk(){
 		if($_POST){
-			
-			//$no_anggota = htmlspecialchars(mysql_real_escape_string($_POST['no_anggota']), ENT_QUOTES); //ini telah diubah oleh 5213100034 & 5213100166 dan 5213100177 & 5213100193 menambahkan code ENT_QUOTES
-			
-			$password = htmlspecialchars(mysql_real_escape_string($_POST['password'].$this->config->item("key_login")), ENT_QUOTES); //ini telah diubah oleh 5213100034 & 5213100166  dan 5213100177 & 5213100193 menambahkan code ENT_QUOTES
+			$no_anggota = $_POST['no_anggota'];
+			$password = $_POST['password'].$this->config->item("key_login");
 			$no_anggota = htmlspecialchars($no_anggota);
 			$password = strip_tags($password);
 			$capt = $_POST["captcha"] != $_SESSION["capt"] OR $_SESSION["capt"]==''; 
 			
+			/*$no_anggota = htmlspecialchars(mysql_real_escape_string($_POST['no_anggota']), ENT_QUOTES); //ini telah diubah oleh 5213100034 & 5213100166 dan 5213100177 & 5213100193 menambahkan code ENT_QUOTES
+			
+			$password = htmlspecialchars(mysql_real_escape_string($_POST['password'].$this->config->item("key_login")), ENT_QUOTES); //ini telah diubah oleh 5213100034 & 5213100166  dan 5213100177 & 5213100193 menambahkan code ENT_QUOTES
+			$no_anggota = htmlspecialchars($no_anggota);
+			$password = strip_tags($password);*/
+						
 			if($_SESSION["capt"]==$_POST["captcha"]){
-				echo "<script>alert('Berhasil Kode CAPTCHA valid!')</script>";
+				//echo "<script>alert('Berhasil Kode CAPTCHA valid!')</script>";
 				}else{
 				echo "<script>alert('Kode CAPTCHA tidak valid!')</script>";
-				/*echo "<SCRIPT LANGUAGE='JavaScript'>
+				echo "<SCRIPT LANGUAGE='JavaScript'>
 				window.alert('Captcha yang anda inputkan salah !!')
 				window.location.href='". base_url()."index.php/website';
-				</SCRIPT>";*/
-				//redirect(website);
+				</SCRIPT>";
+				redirect(website);
 			}
 			
 			$temp = $this->m_koperasi->GetAnggota("where no_anggota = '$no_anggota' and password = md5('$password')")->result_array();
