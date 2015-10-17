@@ -7,6 +7,13 @@ Selesai Bekerja, Tuliskan To Do List Di Sini
 ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa tulis nama dan nrp anda, serta tanggal dan jam anda menuliskan todo ini
 
 <<<<<<< HEAD
+
+32. Muhammad Farhan Naufal (5213100045) & Denny Angga Setyawan (5213100178)
+untuk programmer selanjutnya silahkan mencoba memperbaiki error pada menu berita di halaman admin dan lakukan pengecekan ulang secara keseluruhan pada website apakah masih ada yang error atau tidak
+Kegiatan yang telah kami lakukan : 
+1. Mencoba membuat tampilan berita pada halaman depan website
+2. Melakukan pengecekan dan pembetulan kolom captcha kritik dan saran
+
 31. Robbigh Faubendri (5213100164) & Haikal Rusdi (5213100169) 17/10/2015 (08.00-10.00)
 
 1. Memperbaiki captcha login pada halaman login
