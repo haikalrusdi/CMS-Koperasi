@@ -7,6 +7,13 @@ Selesai Bekerja, Tuliskan To Do List Di Sini
 ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa tulis nama dan nrp anda, serta tanggal dan jam anda menuliskan todo ini
 
 <<<<<<< HEAD
+33. TESAR AKRAM PRATAMA (5213100097) dan CAESAR FAJRIANSAH (5213100179)
+Jam 11.00-12.00
+UPDATE:
+- Memberikan alert required pada kolom Username dan Password di di form Login
+- Memberikan alert khusus pada kolom Email di halaman Form Member yang mengharuskan pengguna untuk memasukkan input dalam format email
+- Membenarkan fitur dan tampilan drowdown pada kolom Pangkat/ Gol. di Member Area
+- Membenarkan tampilan form Berita (namun masih belum maksimal)
 
 32. Muhammad Farhan Naufal (5213100045) & Denny Angga Setyawan (5213100178)
 untuk programmer selanjutnya silahkan mencoba memperbaiki error pada menu berita di halaman admin dan lakukan pengecekan ulang secara keseluruhan pada website apakah masih ada yang error atau tidak
