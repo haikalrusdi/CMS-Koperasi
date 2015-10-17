@@ -7,6 +7,12 @@ Selesai Bekerja, Tuliskan To Do List Di Sini
 ATURAN = tuliskan descending (entri terakhir di bagian paling atas). jangan lupa tulis nama dan nrp anda, serta tanggal dan jam anda menuliskan todo ini
 
 <<<<<<< HEAD
+30. Robbigh Faubendri (5213100164) & Haikal Rusdi (5213100169) 17/10/2015 (08.00-10.00)
+
+1. Memperbaiki captcha login pada halaman login
+2. Memperbaiki tampilan pada bagian sidebar kritik dan saran
+Untuk programmer selanjutnya, membuat perbedaan diantar captcha di setiap kolom yang menggunakan captcha, dan admin bisa memposting dan mengedit berita
+
 29. Kevin Setiawan (5213100108) & Ashma Hanifah (5213100076) 16/10/2015 (14-15.00)
 Memperbaiki validasi captcha ketika menginputkan salah, dan menjadikan captcha dapat digunakan pada kolom keritik dan komentar serta komen. untuk programer selanjutnya dapat membuat captcha agar random disetiap kolomnya, dan membuat adminwebsite dapat mempost berita
 
