@@ -6,7 +6,7 @@
 <title>Berita Online</title>
 <meta http-equiv="content-type"content="text/html;
 charset=UTF-8">
-<link href="style.css"rel="stylesheet"type="text/css">
+<!-- <link href="style.css"rel="stylesheet"type="text/css"> -->
 </head>
 <body>
 <div id="kanvas">

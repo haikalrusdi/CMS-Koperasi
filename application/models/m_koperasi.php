@@ -88,9 +88,9 @@ class M_koperasi extends CI_Model {
 		return $this->db->update($table,$data,$where);
 	}
 	
-	public function UbahPassAnggota( $no_anggota, $password_baru ) {
+	public function UbahPassAnggota( $no_anggota, $password_baru ) { //check by hatma @ 17 okt
 		$this->db->where( array( 'sha1(no_anggota)' => $no_anggota ) );
-		return $this->db->update( 'kop_anggota', array( 'password' => $password_baru ) );
+		return $this->db->update( 'kop_anggota', array( 'password' => md5($password_baru) ) );
 	}
 	
 	public function DeleteData($table,$where){
