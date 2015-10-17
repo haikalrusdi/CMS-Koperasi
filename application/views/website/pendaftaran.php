@@ -12,28 +12,47 @@
 <td><input name="nama" placeholder="Nama" type="text" required width="100px;"></td>
 </tr>
 <tr><th>N I P / N I P H  :</th>
-<td><input name="nip" placeholder="NIP NIPH" type="text"  width="100px;"></td>
+<td><input name="nip" placeholder="NIP NIPH" type="text" required width="100px;"></td>
 </tr>
 <tr><th>Unit Kerja  :</th>
-<td><input name="unit_kerja" placeholder="Unit Kerja" type="text" width="100px;"></td>
+<td><input name="unit_kerja" placeholder="Unit Kerja" type="text" required width="100px;"></td>
 </tr>
 <tr><th>Tempat Lahir  :</th>
-<td><input name="tempat_lahir" placeholder="Tempat Lahir" type="text" width="60px;"></td>
+<td><input name="tempat_lahir" placeholder="Tempat Lahir" type="text" required width="60px;"></td>
 </tr>
 <tr><th>Tanggal Lahir  :</th>
-<td><input type="text" name="tgl_lahir" id="tgl_lahir" placeholder="Klik disini Untuk menampilkan tanggal" value="" /></td>
+<td><input type="text" name="tgl_lahir" id="tgl_lahir" placeholder="Klik disini Untuk menampilkan tanggal" required value="" /></td>
 </tr>
 <tr><th>Pangkat / Gol (PNS)  :</th>
-<td><input name="pangkat" placeholder="Pangkat / Gol (PNS)" type="text" width="100px;"></td>
+<td><select type="text" name="pangkat" placeholder="Pangkat / Gol (PNS)"  required style="width:300px;">
+   <option value="blank" selected="selected"> </option>
+   <option value="IA" selected="selected">I A</option>
+   <option value="IIB">I B</option>
+   <option value="IIC">I C</option>
+   <option value="IID">I D</option>
+   <option value="IIA">II A</option>
+   <option value="IIB">II B</option>
+   <option value="IIC">II C</option>
+   <option value="IID">II D</option>
+   <option value="IIIA">III A</option>
+   <option value="IIIB">III B</option>
+   <option value="IIIC">III C</option>
+   <option value="IIID">III D</option>
+   <option value="IVA">IV A</option>
+   <option value="IVB">IV B</option>
+   <option value="IVC">IV C</option>
+   <option value="IVD">IV D</option>
+   <option value="IVE">IV E</option>
+</select></td>
 </tr>
-<tr><th>No. HP / Telpn.  :</th>
-<td><input name="telepon" placeholder="No. HP / Telepon" type="text" width="100px;"></td>
+<tr><th>No. HP / Telpon  :</th>
+<td><input name="telepon" placeholder="No. HP / Telepon" type="text" required width="100px;"></td>
 </tr>
 <tr><th>Email  :</th>
-<td><input name="email" placeholder="Email" type="text" width="100px;"></td>
+<td><input name="email" placeholder="Email" type="email" required width="100px;"></td>
 </tr>
 <tr><th>Alamat  :</th>
-<td><input name="alamat" placeholder="Alamat" type="text" width="100px;"></td>
+<td><input name="alamat" placeholder="Alamat" type="text" required width="100px;"></td>
 </tr>
 <!--<tr><th>Tanggal Menjadi Anggota  :</th>
 <td><input name="tgl_bergabung" placeholder="" type="text" width="100px;"></td>

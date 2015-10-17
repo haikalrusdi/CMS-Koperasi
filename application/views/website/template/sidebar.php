@@ -5,8 +5,8 @@
 		  </ul>
 		  <div class="login">
 			  <form method="post" action="<?php echo base_url(); ?>index.php/login/masuk">
-				<p><input type="text" name="no_anggota" value="" placeholder="No Anggota"></p>
-				<p><input type="password" name="password" value="" placeholder="Password"></p>
+				<p><input type="text" name="no_anggota" value="" placeholder="No Anggota" required></p>
+				<p><input type="password" name="password" value="" placeholder="Password" required></p>
                 <p><img src="<?php echo base_url(); ?>index.php/captcha" width="214px" alt="captcha"></p>
 				<p><input type="text" name="captcha" value="" placeholder="Masukkan captcha diatas" required></p>
 				
