@@ -34,7 +34,7 @@ class Adminwebsite extends CI_Controller {
       file : adminwebsite.php untuk aplikasi content management system Koperasi
      */
 
-    function __construct() {
+    function __construct() {    // checked by Hatma @ 18 okt
         parent::__construct();
         if (!isset($_SESSION)) {
             session_start();
@@ -44,7 +44,7 @@ class Adminwebsite extends CI_Controller {
         $this->load->helper(array('form', 'url', 'inflector'));
     }
 
-    function index() {
+    function index() {  // checked by Hatma @ 18 okt
         $this->cek_session();
         $data = array(
             'total_post' => $this->m_koperasi->GetContent()->num_rows(),
@@ -62,42 +62,33 @@ class Adminwebsite extends CI_Controller {
         $this->load->view('adminwebsite/login', array('message' => $mess, 'title' => 'Login dasboard admin Koperasi ITS'));
     }
 
-    function proseslogin() {
+    function proseslogin() {    // checked by Hatma @ 18 okt
         if ($_POST) {
 
-            if ($_POST['username'] == "" | $_POST['password'] == "" | $_POST['captcha'] == "" ) {
+            if ($_POST['username'] == "" | $_POST['password'] == "" | $_POST['captcha'] == "" | $_POST["captcha"] != $_SESSION["capt"] | $_SESSION["capt"] == '') {
                 echo "<SCRIPT LANGUAGE='JavaScript'>
-						window.alert('Semua kolom wajib diisi! ')
+						window.alert('Semua kolom wajib diisi! captcha harus sesuai!')
 						window.location.href='" . base_url() . "index.php/admin';
 						</SCRIPT>";
             } else {
 
 
-                $username = htmlspecialchars(mysql_real_escape_string($_POST['username']), ENT_QUOTES); //ini telah diubah oleh 5213100034 & 5213100166  dan 5213100177 & 5213100193 menambahkan code ENT_QUOTES
+                $username = strip_tags($_POST['username']); //ini telah diubah oleh 5213100034 & 5213100166  dan 5213100177 & 5213100193 menambahkan code ENT_QUOTES
                 //ini telah diubah oleh 5213100034 & 5213100166  dan 5213100177 & 5213100193 menambahkan code ENT_QUOTES
-                $password = htmlspecialchars(mysql_real_escape_string($_POST['password']), ENT_QUOTES); //Prevent from SQL Injection & Ganti (encrypt) Password di tabel Userapp menjadi md5
-                $username = htmlspecialchars($username);
-                $password = strip_tags($password);
-                $capt = $_POST["capt"] != $_SESSION["capt"] OR $_SESSION["capt"] == '';
-                $temp = $this->m_koperasi->GetUser("where username = '$username' and password = '$password'")->result_array();
+                //$password = htmlspecialchars($_POST['password'], ENT_QUOTES); //Prevent from SQL Injection & Ganti (encrypt) Password di tabel Userapp menjadi md5
+                //$username = htmlspecialchars($username);
+                $password = strip_tags($_POST['password']);
+                //$capt = $_POST["captcha"] != $_SESSION["capt"] OR $_SESSION["capt"] == '';
+                $temp = $this->m_koperasi->GetUser("where username = '$username' and password = md5('$password')")->result_array();
                 if ($temp != NULL) {
                     $data = array(
                         'username' => $temp[0]['username'],
-                        'pengguna' => $temp[0]['nama_lengkap'],
-                        'password' => $temp[0]['password'],
-                        'capt' => $temp[0]['capt']
+                        'pengguna' => $temp[0]['nama_lengkap']//,
+                            //'password' => $temp[0]['password'],
+                            //'capt' => $temp[0]['capt']
                     );
-                    $this->session->set_userdata('application\views\adminwebsite\login', $data);
-                    redirect("application\views\adminwebsite\login");
-                }
-
-                // //ini telah diubah oleh 5213100034 & 5213100166 // ubah session 
-                if ($capt) {
-                    echo "<SCRIPT LANGUAGE='JavaScript'>
-				window.alert('Captcha salah yang anda inputkan salah !!')
-				window.location.href='" . base_url() . "index.php/adminwebsite';
-				</SCRIPT>";
-                    //redirect(website);
+                    $this->session->set_userdata('login', $data);
+                    redirect("adminwebsite");
                 } else {
                     echo "<SCRIPT LANGUAGE='JavaScript'>
 				window.alert('No Anggota atau Password Anda Salah !!')
@@ -778,12 +769,12 @@ class Adminwebsite extends CI_Controller {
         }
     }
 
-    function destroyingsession() {
+    function destroyingsession() {  //checked by hatma @ 18 okt
         $this->session->sess_destroy();
         if (!isset($_SESSION)) {
             session_start();
         }
-        session_destroy();
+        //session_destroy();
         header('location:' . base_url() . 'index.php/adminwebsite/login');
     }
 
