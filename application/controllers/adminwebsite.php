@@ -907,7 +907,7 @@ class Adminwebsite extends CI_Controller {
     }
 
     //IMPORT
-    function insertusers() {
+    function insertusers() {   //checked by hatma 19okt
         $this->cek_session();
         $data_sess = $this->session->userdata('login');
         $data = array(
@@ -923,7 +923,7 @@ class Adminwebsite extends CI_Controller {
         $this->template->display('adminwebsite/input_anggota', $data);
     }
 
-    function do_upload() {
+    function do_upload() {  //checked by hatma 19 okt
         $this->cek_session();
         $config['upload_path'] = './asset/files/data_koperasi/';
         $config['allowed_types'] = 'xls';
@@ -953,26 +953,34 @@ class Adminwebsite extends CI_Controller {
                 $dataexcel[$i - 1]['nama'] = $data['cells'][$i][1];
                 $dataexcel[$i - 1]['nip'] = $data['cells'][$i][2];
                 $dataexcel[$i - 1]['no_anggota'] = $data['cells'][$i][3];
-                $dataexcel[$i - 1]['password'] = $data['cells'][$i][4];
+                //$dataexcel[$i - 1]['password'] = $data['cells'][$i][4];
                 $dataexcel[$i - 1]['unit'] = $data['cells'][$i][5];
                 $dataexcel[$i - 1]['tgl_bergabung'] = $data['cells'][$i][6];
             }
+
+            $this->m_koperasi->truncate_anggota();
+
             //cek data
-            $check = $this->m_koperasi->search_anggota($dataexcel);
+            //$check = $this->m_koperasi->search_anggota($dataexcel);
             /* var_dump($check);
               exit(); */
-            if (count($check) > 0) {
-                $this->m_koperasi->update_anggota($dataexcel);
-                header('location:' . base_url() . 'index.php/adminwebsite/dataanggota/1');
-            } else {
+            //if (count($check) > 0) {
+            //    $this->m_koperasi->update_anggota($dataexcel);
+            //    header('location:' . base_url() . 'index.php/adminwebsite/dataanggota/1');
+            //} else {
                 $this->m_koperasi->tambah_anggota($dataexcel);
-                header('location:' . base_url() . 'index.php/adminwebsite/dataanggota/1');
-            }
+                $this->m_koperasi->set_default_password_anggota();
+                echo "<SCRIPT LANGUAGE='JavaScript'>
+                        window.alert('Upload Anggota Sukses !')
+                        window.location.href='" . base_url() . "index.php/admin';
+                        </SCRIPT>";
+                //header('location:' . base_url() . 'index.php/adminwebsite/');
+            //}
         }
         //	header('location:'.base_url().'index.php/adminwebsite/dataanggota');
     }
 
-    function dataanggota($mess = -1) {
+    function dataanggota($mess = -1) {  // checked by hatma @ 19 oct 2015
         $this->cek_session();
         $data_sess = $this->session->userdata('login');
         $data = array(
