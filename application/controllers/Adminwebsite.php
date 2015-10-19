@@ -788,7 +788,7 @@ class Adminwebsite extends CI_Controller {
     /* ------KOPERASI -------- */
 
     //INSERT
-    function insertuser() {
+    function insertuser() { //checked by hatma 19oct
         $this->cek_session();
         $data_sess = $this->session->userdata('login');
         $data = array(
@@ -806,13 +806,14 @@ class Adminwebsite extends CI_Controller {
         $this->template->display('adminwebsite/input_anggota1', $data);
     }
 
-    function saveanggota() {
+    function saveanggota() {    // checked by hatma 19 oct
         $this->cek_session();
         if ($_POST) {
             $data_sess = $this->session->userdata('login');
             $nama = $_POST['nama'];
             $nip = $_POST['nip'];
             $no_anggota = $_POST['no_anggota'];
+            $no_anggota_lama = $_POST['no_anggota_lama'];
             $password = ($_POST['password']);
             $unit = $_POST['unit'];
             $tgl_bergabung = $_POST['tgl_bergabung'];
@@ -823,11 +824,18 @@ class Adminwebsite extends CI_Controller {
                     'nama' => $nama,
                     'nip' => $nip,
                     'no_anggota' => $no_anggota,
-                    'password' => $password,
+                    //'password' => md5($password),
                     'unit' => $unit,
                     'tgl_bergabung' => $tgl_bergabung
                 );
-                $result = $this->m_koperasi->InsertData('kop_anggota', $data);
+                $result = $this->m_koperasi->InsertData('anggota', $data);
+               
+                $data2 = array(
+                    'no_anggota' => $no_anggota,
+                    'password' => md5($password)
+                );
+                $result2 = $this->m_koperasi->InsertData('anggotapassword', $data2);
+                
                 if ($result = 1) {
                     header('location:' . base_url() . 'index.php/adminwebsite/dataanggota/2');
                 } else {
@@ -838,11 +846,18 @@ class Adminwebsite extends CI_Controller {
                     'nama' => $nama,
                     'nip' => $nip,
                     'no_anggota' => $no_anggota,
-                    'password' => $password,
+                    //'password' => md5($password),
                     'unit' => $unit,
                     'tgl_bergabung' => $tgl_bergabung
                 );
-                $result = $this->m_koperasi->UpdateData('kop_anggota', $data, array('id_userkoperasi' => $kode_anggota));
+                $result = $this->m_koperasi->UpdateData('anggota', $data, array('id_userkoperasi' => $kode_anggota));
+                
+                $data2 = array(
+                    'no_anggota' => $no_anggota,
+                    'password' => md5($password)
+                );
+                $result2 = $this->m_koperasi->UpdateData('anggotapassword', $data2, array('no_anggota' => $no_anggota_lama));
+                
                 if ($result == 1) {
                     header('location:' . base_url() . 'index.php/adminwebsite/dataanggota/3');
                 } else {
@@ -854,7 +869,7 @@ class Adminwebsite extends CI_Controller {
         }
     }
 
-    function editanggota($kode = 0) {
+    function editanggota($kode = 0) {   // checked by hatma 19okt
         $this->cek_session();
         $data_sess = $this->session->userdata('login');
         $data_content = $this->m_koperasi->Getdataanggota("where id_userkoperasi = '$kode'")->result_array();
@@ -875,7 +890,7 @@ class Adminwebsite extends CI_Controller {
         $this->template->display('adminwebsite/input_anggota1', $data);
     }
 
-    function tampilprofile($kode = 0) {
+    function tampilprofile($kode = 0) { //checked by hatma 19 okt
         $this->cek_session();
         $data_sess = $this->session->userdata('login');
         $data_content = $this->m_koperasi->Getdataanggota("where id_userkoperasi = '$kode'")->result_array();
@@ -898,7 +913,8 @@ class Adminwebsite extends CI_Controller {
 
     function deleteanggota($kode = 0) {
         $this->cek_session();
-        $result = $this->m_koperasi->DeleteData('kop_anggota', array('id_userkoperasi' => $kode));
+        $result = $this->m_koperasi->DeleteData('anggota', array('id_userkoperasi' => $kode));
+        $this->m_koperasi->hapus_password_userx($kode);
         if ($result == 1) {
             header('location:' . base_url() . 'index.php/adminwebsite/dataanggota/1');
         } else {
@@ -958,7 +974,6 @@ class Adminwebsite extends CI_Controller {
                 $dataexcel[$i - 1]['tgl_bergabung'] = $data['cells'][$i][6];
             }
 
-            $this->m_koperasi->truncate_anggota();
 
             //cek data
             //$check = $this->m_koperasi->search_anggota($dataexcel);
@@ -968,6 +983,7 @@ class Adminwebsite extends CI_Controller {
             //    $this->m_koperasi->update_anggota($dataexcel);
             //    header('location:' . base_url() . 'index.php/adminwebsite/dataanggota/1');
             //} else {
+                $this->m_koperasi->truncate_anggota();
                 $this->m_koperasi->tambah_anggota($dataexcel);
                 $this->m_koperasi->set_default_password_anggota();
                 echo "<SCRIPT LANGUAGE='JavaScript'>
@@ -994,7 +1010,7 @@ class Adminwebsite extends CI_Controller {
         $this->template->display('adminwebsite/data_anggota', $data);
     }
 
-    function insertsimpanan() {
+    function insertsimpanan() { // checked by hatma 19 okt
         $this->cek_session();
         $data_sess = $this->session->userdata('login');
         $data = array(
@@ -1010,7 +1026,7 @@ class Adminwebsite extends CI_Controller {
         $this->template->display('adminwebsite/input_simpanan', $data);
     }
 
-    function updatesimpanan() {
+    function updatesimpanan() { // checked by hatma 19 okt
         $this->cek_session();
         $config['upload_path'] = './asset/files/data_koperasi/';
         $config['allowed_types'] = 'xls';
@@ -1044,6 +1060,7 @@ class Adminwebsite extends CI_Controller {
                 $dataexcel[$i - 1]['tgl_update'] = Date("Y-m-d H:i:s");
             }
             //cek data
+            /*
             $check = $this->m_koperasi->search_simpanan($dataexcel);
             if (count($check) > 0) {
                 $this->m_koperasi->update_simpanan($dataexcel);
@@ -1051,12 +1068,19 @@ class Adminwebsite extends CI_Controller {
             } else {
                 $this->m_koperasi->tambah_simpanan($dataexcel);
                 header('location:' . base_url() . 'index.php/adminwebsite/dataanggota/1');
-            }
+            } 
+             */
+                $this->m_koperasi->truncate_simpanan();
+                $this->m_koperasi->tambah_simpanan_baru($dataexcel);
+                echo "<SCRIPT LANGUAGE='JavaScript'>
+                        window.alert('Upload Simpanan Sukses !')
+                        window.location.href='" . base_url() . "index.php/admin';
+                        </SCRIPT>";
         }
         //	header('location:'.base_url().'index.php/adminwebsite/dataanggota');
     }
 
-    function insertpinjaman() {
+    function insertpinjaman() { // checked by hatma 19 okt
         $this->cek_session();
         $data_sess = $this->session->userdata('login');
         $data = array(
@@ -1072,7 +1096,7 @@ class Adminwebsite extends CI_Controller {
         $this->template->display('adminwebsite/input_pinjaman', $data);
     }
 
-    function updatepinjaman() {
+    function updatepinjaman() { // checked by hatma 19 okt
         $this->cek_session();
         $config['upload_path'] = './asset/files/data_koperasi/';
         $config['allowed_types'] = 'xls';
@@ -1110,6 +1134,7 @@ class Adminwebsite extends CI_Controller {
                 $dataexcel[$i - 1]['tgl_update'] = Date("Y-m-d H:i:s");
             }
             //cek data
+            /*
             $check = $this->m_koperasi->search_pinjaman($dataexcel);
             if (count($check) > 0) {
                 $this->m_koperasi->update_pinjaman($dataexcel);
@@ -1118,6 +1143,14 @@ class Adminwebsite extends CI_Controller {
                 $this->m_koperasi->tambah_pinjaman($dataexcel);
                 header('location:' . base_url() . 'index.php/adminwebsite/dataanggota/1');
             }
+             */
+                $this->m_koperasi->truncate_pinjaman();
+                $this->m_koperasi->tambah_pinjaman_baru($dataexcel);
+                echo "<SCRIPT LANGUAGE='JavaScript'>
+                        window.alert('Upload Pinjaman Sukses !')
+                        window.location.href='" . base_url() . "index.php/admin';
+                        </SCRIPT>";
+                
         }
         //	header('location:'.base_url().'index.php/adminwebsite/dataanggota');
     }

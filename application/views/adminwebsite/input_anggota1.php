@@ -19,6 +19,7 @@
                                     <div class="span9"><input type="text" class="validate[required]" name="nip" value="<?php echo $nip ?>" placeholder="N I P"/></div>
                                 </div>
                                <div class="row-form">
+                                        <input type="hidden" value="<?php echo $no_anggota; ?>" name="no_anggota_lama" />
                                     <div class="span3"> No Anggota:</div>
                                     <div class="span9"><input type="text" class="validate[required]" name="no_anggota" value="<?php echo $no_anggota; ?>" placeholder="No Anggota"/></div>
                                 </div>
@@ -29,11 +30,8 @@
                         <div class="block">
                             <div class="data-fluid">
                                 <div class="row-form">
-                                     <?php if($status == "baru"){ ?>
                                     <div class="span3"> Password:</div>
                                     <div class="span9"><input type="text" class="validate[required]" name="password" value="" placeholder="Password"/></div>
-                                    <?php }else{ ?> <div class="span9"><input type="hidden" class="validate[required]" name="password" value="<?php echo $password; ?>" /></div> 
-                                    <?php } ?>
                                 </div>
 
                                 <div class="row-form">

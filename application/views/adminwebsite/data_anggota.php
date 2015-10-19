@@ -54,9 +54,9 @@
                                                 <td><?php echo $c['total']; ?></td>
         
                                                 <td>
-                                                    <a href="<?php echo base_url(); ?>index.php/adminwebsite/tampilprofile/<?php echo $c['id_userkoperasi']; ?>" class="button green">
-                                                        <div class="icon"><span class="ico-pencil"></span></div>
-                                                    </a>
+                                                    <!-- <a href="<?php echo base_url(); ?>index.php/adminwebsite/tampilprofile/<?php echo $c['id_userkoperasi']; ?>" class="button green">
+                                                        <div class="icon"><span class="ico-info"></span></div>
+                                                    </a> -->
                                                     <a href="<?php echo base_url(); ?>index.php/adminwebsite/editanggota/<?php echo $c['id_userkoperasi']; ?>" class="button green">
                                                         <div class="icon"><span class="ico-pencil"></span></div>
                                                     </a>

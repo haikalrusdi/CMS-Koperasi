@@ -44,7 +44,7 @@ class M_koperasi extends CI_Model {
     }
 
     function getdataanggotaall($where = '') {
-        return $this->db->query("select * from kop_simpanan JOIN kop_anggota ON kop_simpanan.no_anggota=kop_anggota.no_anggota ;");
+        return $this->db->query("select * from kop_anggota LEFT JOIN kop_simpanan ON kop_simpanan.no_anggota=kop_anggota.no_anggota ;");
     }
 
     function GetContent($where = '') {
@@ -118,18 +118,35 @@ class M_koperasi extends CI_Model {
         $this->db->truncate('anggota');
     }
 
+    function truncate_simpanan() {   // checked by hatma 19 okt
+        $this->db->truncate('kop_simpanan');
+    }
+
+    function truncate_pinjaman() {   // checked by hatma 19 okt
+        $this->db->truncate('kop_pinjaman');
+    }
+
     function set_default_password_anggota() {   // checked by hatma 19 oct
         $query = $this->db->query('SELECT no_anggota FROM kop_anggota WHERE password IS NULL');
 
         foreach ($query->result() as $row) {
-            echo $row->title;
+           // echo $row->title;
             $this->db->query("INSERT INTO anggotapassword VALUES ('".$row->no_anggota."', md5('".$row->no_anggota."') ) ");
+        }
+    }
+
+    function hapus_password_userx($id_userkoperasi) {   // checked by hatma 19 oct
+        $query = $this->db->query("SELECT no_anggota FROM kop_anggota WHERE id_userkoperasi ='".$id_userkoperasi."' ");
+
+        foreach ($query->result() as $row) {
+            //echo $row->no_anggota;
+            $this->db->query("DELETE FROM anggotapassword WHERE no_anggota = '".$row->no_anggota."' ) ");
         }
     }
 
     /* -----------Uploads Anggota---------- */
 
-    function tambah_anggota($dataarray) { {
+    function tambah_anggota($dataarray) { { // checked by hatma 19okt
             for ($i = 1; $i <= count($dataarray); $i++) {
                 $data = array(
                     'nama' => $dataarray[$i]['nama'],
@@ -140,6 +157,42 @@ class M_koperasi extends CI_Model {
                     'tgl_bergabung' => $dataarray[$i]['tgl_bergabung']
                 );
                 $this->db->insert('anggota', $data);
+            }
+        }
+    }
+
+    /* -----------Uploads Simpanan---------- */
+
+    function tambah_simpanan_baru($dataarray) { { // checked by hatma 19okt
+            for ($i = 1; $i <= count($dataarray); $i++) {
+                $data = array(
+                    'no_anggota' => $dataarray[$i]['no_anggota'],
+                    'spn_pokok' => $dataarray[$i]['spn_pokok'],
+                    'spn_wajib' => $dataarray[$i]['spn_wajib'],
+                    'total' => $dataarray[$i]['total'],
+                    'tgl_update' => $dataarray[$i]['tgl_update']
+                );
+                $this->db->insert('kop_simpanan', $data);
+            }
+        }
+    }
+
+    /* -----------Uploads Pinjaman---------- */
+
+    function tambah_pinjaman_baru($dataarray) { { // checked by hatma 19okt
+            for ($i = 1; $i <= count($dataarray); $i++) {
+                $data = array(
+                    'no_anggota' => $dataarray[$i]['no_anggota'],
+                    'jumlah_pinjaman' => $dataarray[$i]['jumlah_pinjaman'],
+                    'masa' => $dataarray[$i]['masa'],
+                    'sekarang' => $dataarray[$i]['sekarang'],
+                    'sisa' => $dataarray[$i]['sisa'],
+                    'angsuran_pokok' => $dataarray[$i]['angsuran_pokok'],
+                    'sisa_angsuran' => $dataarray[$i]['sisa_angsuran'],
+                    'keterangan' => $dataarray[$i]['keterangan'],
+                    'tgl_update' => $dataarray[$i]['tgl_update']
+                );
+                $this->db->insert('kop_pinjaman', $data);
             }
         }
     }
