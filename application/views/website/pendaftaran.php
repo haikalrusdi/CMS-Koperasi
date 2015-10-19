@@ -24,7 +24,7 @@
 <td><input type="text" name="tgl_lahir" id="tgl_lahir" placeholder="Klik disini Untuk menampilkan tanggal" required value="" /></td>
 </tr>
 <tr><th>Pangkat / Gol (PNS)  :</th>
-<td><select type="text" name="pangkat" placeholder="Pangkat / Gol (PNS)"  required style="width:300px;">
+<td><select type="text" name="pangkat" placeholder="Pangkat / Gol (PNS)"  required style="width:378px;">
    <option value="blank" selected="selected"> </option>
    <option value="IA" selected="selected">I A</option>
    <option value="IIB">I B</option>
