@@ -113,12 +113,17 @@ body a{
 	border : 0px solid #f58017;
 	border-radius : 0px;
     padding-right:43px;
+	
 }
 #nav ul li {
     margin:0;
+	/*aku rubah ini*/
+	background-color: #39C6ED;
 }
 #nav ul li a {
     width:157px;
+	/*aku rubah ini*/
+	color: white;
     
 }
 #nav ul li a.fly {
@@ -127,6 +132,8 @@ body a{
 	border-left : 1px solid #98b3f6;
 	border-right : 1px solid #98b3f6;
 	border-bottom : 1px solid #98b3f6;
+	
+	
 }
 
 /*hover styles*/
