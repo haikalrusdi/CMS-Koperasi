@@ -26,7 +26,7 @@
 <tr><th>Pangkat / Gol (PNS)  :</th>
 <td><select type="text" name="pangkat" placeholder="Pangkat / Gol (PNS)"  required style="width:378px;">
    <option value="blank" selected="selected"> </option>
-   <option value="IA" selected="selected">I A</option>
+   <option value="IA">I A</option>
    <option value="IIB">I B</option>
    <option value="IIC">I C</option>
    <option value="IID">I D</option>
@@ -46,7 +46,7 @@
 </select></td>
 </tr>
 <tr><th>No. HP / Telpon  :</th>
-<td><input name="telepon" placeholder="No. HP / Telepon" type="text" required width="100px;"></td>
+<td><input name="telepon" placeholder="No. HP / Telepon" type="number" required style="width:382px;"></td>
 </tr>
 <tr><th>Email  :</th>
 <td><input name="email" placeholder="Email" type="email" required width="100px;"></td>
@@ -76,6 +76,10 @@
 			if(cekdaftar==false){
 				alert("Anda harus menyetujui dan Centang untuk melanjutkan");
 				return false;
+			}
+			else {
+				alert("Selamat! Anda telah berhasil terdaftar sebagai anggota KPRI-ITS");
+				return true;
 			}
 			}
 
