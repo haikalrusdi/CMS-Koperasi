@@ -4,8 +4,22 @@
 			<div class="clearfix"> </div>
 		  </ul>
 		  <div class="login">
+		  <script>
+		  function isNumberKey(evt)
+{
+var charCode = (evt.which) ? evt.which : event.keyCode
+if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+alert("Hanya dapat menginputkan nomor");
+return false; 
+	} 
+	else  
+	{ 
+return true; 
+	}
+}
+</script>
 			  <form method="post" action="<?php echo base_url(); ?>index.php/login/masuk">
-				<p><input type="text" name="no_anggota" value="" placeholder="No Anggota" required></p>
+				<p id="login"><input type="text" id="nomor" onkeypress="return isNumberKey(event)" name="no_anggota" value="" placeholder="No Anggota" required></p>
 				<p><input type="password" name="password" value="" placeholder="Password" required></p>
                 <p><img src="<?php echo base_url(); ?>index.php/captcha" width="214px" alt="captcha"></p>
 				<p><input type="text" name="captcha" value="" placeholder="Masukkan captcha diatas" required></p>

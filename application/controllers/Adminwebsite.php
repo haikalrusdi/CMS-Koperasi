@@ -8,7 +8,7 @@ function sqlinjection($data) {
 //
 
 if (isset($_POST['submit'])) {
-    // bagian ini telah dirubah 5213100034 & 5213100166  dan 5213100177 & 5213100193 menambahkan code ENT_QUOTES
+    // bagian ini telah dirubah 5213100034 & 5213100166 dan 5213100177 & 5213100193 menambahkan code ENT_QUOTES
 
     $username = htmlspecialchars(mysql_real_escape_string($_POST['username']), ENT_QUOTES); //changed
 

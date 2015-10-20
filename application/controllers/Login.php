@@ -49,15 +49,13 @@ class Login extends CI_Controller {
               $no_anggota = htmlspecialchars($no_anggota);
               $password = strip_tags($password); */
 
-            if ($_SESSION["capt"] == $_POST["captcha"]) {
-                //echo "<script>alert('Berhasil Kode CAPTCHA valid!')</script>";
-            } else {
+            if ($_SESSION["capt"] != $_POST["captcha"]) { //sebaiknya menggunakan != karena value dari ifnya masih kosong sehingga menyebabkan bug pada log in captcha 5213100177
                 //echo "<script>alert('Kode CAPTCHA tidak valid!')</script>";
                 echo "<SCRIPT LANGUAGE='JavaScript'>
 				window.alert('Captcha yang anda inputkan salah !!')
 				window.location.href='" . base_url() . "index.php/website';
 				</SCRIPT>";
-                redirect(website);
+                //redirect(website);
             }
 
             $temp = $this->m_koperasi->GetAnggota("where no_anggota = '$no_anggota' and password = md5('$password')")->result_array();
