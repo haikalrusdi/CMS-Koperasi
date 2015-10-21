@@ -17,7 +17,7 @@
                                 <div class="row-form">
                                     <div class="span3">Header Berita:</div>
                                     <div class="span9">
-                                            <input type="file" class="validate[required]" id="header_post" name="filefoto" value="<?php echo $header_post; ?>" accept="image/*" required/
+                                            <input type="file" class="validate[required]" id="header_post" name="filefoto" value="<?php echo $header_post; ?>" accept="image/*" required/>
                                     </div>
                                 </div> 
                                 <div class="row-form">
