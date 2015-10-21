@@ -13,7 +13,9 @@
 			<input type="text" name="masukkan komentar" placeholder="masukkan komentar">
 			<img src="http://localhost/CMS-Koperasi/index.php/captcha" width="214px" alt="captcha">
             <p><input type="text" name="captcha" value="" placeholder="Masukan captcha diatas" required></p>
+            		<div style="text-align: center">
 			<input type="submit" value="submit komentar">
+			</div>
 		  </form> 
                                         
     	</div>
