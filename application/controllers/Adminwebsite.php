@@ -77,7 +77,7 @@ class Adminwebsite extends CI_Controller {
                 //$username = htmlspecialchars($username);
                 $password = strip_tags($_POST['password']);
                 //$capt = $_POST["captcha"] != $_SESSION["capt"] OR $_SESSION["capt"] == '';
-                $temp = $this->m_koperasi->GetUser("where username = '$username' and password ='$password'")->result_array();
+                $temp = $this->m_koperasi->GetUser("where username = '$username' and password = md5('$password')")->result_array();
                 if ($temp != NULL) {
                     $data = array(
                         'username' => $temp[0]['username'],
