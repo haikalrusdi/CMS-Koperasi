@@ -62,7 +62,9 @@ return true;
 			  <form method="post" action="<?php echo base_url(); ?>index.php/login/saran_kritik">
 				<input type="text" name="kritik" placeholder="kritik">
 				<input type="text" name="saran" placeholder="saran">
+				<div style="text-align: center">
 				<img src="http://localhost/CMS-Koperasi/index.php/captcha" width="214px" alt="captcha">
+				</div>
 				<p><input type="text" name="captcha" value="" placeholder="Masukkan captcha diatas" required></p>
 				<input type="submit" name="login" value="submit">
 			  </form>
