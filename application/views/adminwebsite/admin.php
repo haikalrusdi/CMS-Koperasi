@@ -134,11 +134,11 @@
                                                 <td><a href=""><?php echo $u['twitter']; ?></a></td>
                                                 <td><a href=""><?php echo $u['g_plus']; ?></a></td>
                                                 <td>
-                                                    <a href="<?php echo base_url(); ?>index.php/Adminwebsite/deleteuser/<?php echo $u['kode_user']; ?>" onclick="return confirm('yakin hapus data ini ?');" class="button red">
+                                                    <a href="<?php echo base_url(); ?>index.php/Adminwebsite/deleteuser/<?php echo $u['kode_user']; ?>" onclick="return confirm('Apakah anda yakin menghapus data ini ?');" class="button red">
                                                         <div class="icon"><span class="ico-remove"></span></div>
                                                     </a>
 													
-													<a href="<?php echo base_url(); ?>index.php/adminwebsite/edituser/<?php echo $u['kode_user']; ?>" onclick="return confirm('yakin data ini ?');" class="button blue">
+													<a href="<?php echo base_url(); ?>index.php/adminwebsite/edituser/<?php echo $u['kode_user']; ?>" onclick="return confirm('Apakah anda yakin mengedit data ini ?');" class="button blue">
                                                         <div class="icon"><span class="ico-remove"></span></div>
                                                     </a>
                                                 </td>

@@ -71,8 +71,6 @@ class Adminwebsite extends CI_Controller {
 						window.location.href='" . base_url() . "index.php/admin';
 						</SCRIPT>";
             } else {
-
-
                 $username = strip_tags($_POST['username']); //ini telah diubah oleh 5213100034 & 5213100166  dan 5213100177 & 5213100193 menambahkan code ENT_QUOTES
                 //ini telah diubah oleh 5213100034 & 5213100166  dan 5213100177 & 5213100193 menambahkan code ENT_QUOTES
                 //$password = htmlspecialchars($_POST['password'], ENT_QUOTES); //Prevent from SQL Injection & Ganti (encrypt) Password di tabel Userapp menjadi md5

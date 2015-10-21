@@ -37,16 +37,23 @@ class Login extends CI_Controller {
 
     function masuk() {  // CHECKED by Hatma at 17 okt 
         if ($_POST) {
-            $no_anggota = htmlspecialchars($_POST['no_anggota'], ENT_QUOTES);
+            
+			if ($_POST['no_anggota'] == "" | $_POST['password'] == "" | $_POST['captcha'] == "" | $_POST["captcha"] != $_SESSION["capt"] | $_SESSION["capt"] == '') {
+                echo "<SCRIPT LANGUAGE='JavaScript'>
+						window.alert('Semua kolom wajib diisi! Captcha harus sesuai!')
+						window.location.href='" . base_url() . "index.php/website';
+						</SCRIPT>";
+						
+			/*$no_anggota = htmlspecialchars($_POST['no_anggota'], ENT_QUOTES);
             $password = htmlspecialchars($_POST['password'] . $this->config->item("key_login"), ENT_QUOTES);
             $no_anggota = htmlspecialchars($no_anggota);
             $password = strip_tags($password);
             $capt = $_POST["captcha"] == $_SESSION["capt"] OR $_SESSION["capt"] == '';
 
-            /* $no_anggota = htmlspecialchars(mysql_real_escape_string($_POST['no_anggota']), ENT_QUOTES); //ini telah diubah oleh 5213100034 & 5213100166 dan 5213100177 & 5213100193 menambahkan code ENT_QUOTES
+              $no_anggota = htmlspecialchars(mysql_real_escape_string($_POST['no_anggota']), ENT_QUOTES); //ini telah diubah oleh 5213100034 & 5213100166 dan 5213100177 & 5213100193 menambahkan code ENT_QUOTES
               $password = htmlspecialchars(mysql_real_escape_string($_POST['password'].$this->config->item("key_login")), ENT_QUOTES); //ini telah diubah oleh 5213100034 & 5213100166  dan 5213100177 & 5213100193 menambahkan code ENT_QUOTES
               $no_anggota = htmlspecialchars($no_anggota);
-              $password = strip_tags($password); */
+              $password = strip_tags($password); 
 
             if ($capt) { //sebaiknya menggunakan != karena value dari ifnya masih kosong sehingga menyebabkan bug pada log in captcha 5213100177
 			echo "<script>alert('Kode captcha valid!')</script>";}
@@ -55,30 +62,33 @@ class Login extends CI_Controller {
 				window.alert('Captcha yang anda inputkan salah !!')
 				window.location.href='" . base_url() . "index.php/website';
 				</SCRIPT>";
-                redirect(website);
-            }
-
-            $temp = $this->m_koperasi->GetAnggota("where no_anggota = '$no_anggota' and password = md5('$password')")->result_array();
-            //$result = mysql_query($temp);
-            //$sSuccessMsg = ($temp != NULL ?
-            //                "<div class=\"alert-box success\">Succesfully logged in.<a href=\"\" class=\"close\">&times;</a></div>" :
-            //                "<div class=\"alert-box alert\">Wrong user name or password.<a href=\"\" class=\"close\">&times;</a></div>");
-            if ($temp != NULL) {
-                $data = array(
-                    //'logged_in' => 'yesGetMeLogin',
-                    'no_anggota' => $temp[0]['no_anggota'],
-                    'pengguna' => $temp[0]['nama']//,
-                    //'password' => $temp[0]['password'],
-                    //'capt' => $temp[0]['capt']
-                );
-                $this->session->set_userdata('login', $data);
-                redirect("login");
+                redirect(website);-->*/
             } else {
-                echo "<SCRIPT LANGUAGE='JavaScript'>
-				window.alert('No Anggota atau Password Anda Salah !!')
-				window.location.href='" . base_url() . "index.php/website';
-				</SCRIPT>";
-            }
+				$no_anggota = strip_tags($_POST['no_anggota']);
+				$password = strip_tags($_POST['password']);
+				
+				$temp = $this->m_koperasi->GetAnggota("where no_anggota = '$no_anggota' and password = md5('$password')")->result_array();
+				//$result = mysql_query($temp);
+				//$sSuccessMsg = ($temp != NULL ?
+				//                "<div class=\"alert-box success\">Succesfully logged in.<a href=\"\" class=\"close\">&times;</a></div>" :
+				//                "<div class=\"alert-box alert\">Wrong user name or password.<a href=\"\" class=\"close\">&times;</a></div>");
+				if ($temp != NULL) {
+					$data = array(
+						//'logged_in' => 'yesGetMeLogin',
+						'no_anggota' => $temp[0]['no_anggota'],
+						'pengguna' => $temp[0]['nama']//,
+						//'password' => $temp[0]['password'],
+						//'capt' => $temp[0]['capt']
+					);
+					$this->session->set_userdata('login', $data);
+					redirect("login");
+				} else {
+					echo "<SCRIPT LANGUAGE='JavaScript'>
+					window.alert('No Anggota atau Password Anda Salah !!')
+					window.location.href='" . base_url() . "index.php/website';
+					</SCRIPT>";
+				}
+			}	
         } else {
             $this->load->view('website/pagenotfound', array('title' => 'page not found'));
         }
