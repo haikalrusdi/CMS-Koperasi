@@ -26,9 +26,9 @@ return true;
 				
 				
 				<p class="submit">
-				
+				<div style="text-align: center">
 				<input type="submit" name="login" value="Login"></p>
-
+				</div>
 			  </form>
 		  </div>
 		  
@@ -66,7 +66,9 @@ return true;
 				<img src="http://localhost/CMS-Koperasi/index.php/captcha" width="214px" alt="captcha">
 				</div>
 				<p><input type="text" name="captcha" value="" placeholder="Masukkan captcha diatas" required></p>
+				<div style="text-align: center">
 				<input type="submit" name="login" value="submit">
+				</div>
 			  </form>
 		  </div>
 		  
