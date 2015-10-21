@@ -41,7 +41,7 @@ class Login extends CI_Controller {
             $password = $_POST['password'] . $this->config->item("key_login");
             $no_anggota = htmlspecialchars($no_anggota);
             $password = strip_tags($password);
-            $capt = $_POST["captcha"] != $_SESSION["capt"] OR $_SESSION["capt"] == '';
+            $capt = $_POST["captcha"] == $_SESSION["capt"] OR $_SESSION["capt"] == '';
 
             /* $no_anggota = htmlspecialchars(mysql_real_escape_string($_POST['no_anggota']), ENT_QUOTES); //ini telah diubah oleh 5213100034 & 5213100166 dan 5213100177 & 5213100193 menambahkan code ENT_QUOTES
 
@@ -49,13 +49,14 @@ class Login extends CI_Controller {
               $no_anggota = htmlspecialchars($no_anggota);
               $password = strip_tags($password); */
 
-            if ($_SESSION["capt"] != $_POST["captcha"]) { //sebaiknya menggunakan != karena value dari ifnya masih kosong sehingga menyebabkan bug pada log in captcha 5213100177
-                //echo "<script>alert('Kode CAPTCHA tidak valid!')</script>";
-                echo "<SCRIPT LANGUAGE='JavaScript'>
+            if ($capt  ) { //sebaiknya menggunakan != karena value dari ifnya masih kosong sehingga menyebabkan bug pada log in captcha 5213100177
+			echo "<script>alert('Kode CAPTCHA tidak valid!')</script>";}
+			else {
+				echo "<SCRIPT LANGUAGE='JavaScript'>
 				window.alert('Captcha yang anda inputkan salah !!')
 				window.location.href='" . base_url() . "index.php/website';
 				</SCRIPT>";
-                //redirect(website);
+                redirect(website);
             }
 
             $temp = $this->m_koperasi->GetAnggota("where no_anggota = '$no_anggota' and password = md5('$password')")->result_array();
@@ -68,8 +69,8 @@ class Login extends CI_Controller {
                     //'logged_in' => 'yesGetMeLogin',
                     'no_anggota' => $temp[0]['no_anggota'],
                     'pengguna' => $temp[0]['nama']//,
-                        //'password' => $temp[0]['password'],
-                        //'capt' => $temp[0]['capt']
+                    //'password' => $temp[0]['password'],
+                    //'capt' => $temp[0]['capt']
                 );
                 $this->session->set_userdata('login', $data);
                 redirect("login");
