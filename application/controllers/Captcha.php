@@ -14,8 +14,9 @@ class Captcha extends CI_Controller {
     }
 	function index(){
 	$string1="abcdefghijklmnopqrstuvwxyz";
-	$string2="1234567890";
-	$string=$string1.$string2;
+	$string2="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	$string3="1234567890";
+	$string=$string1.$string2.$string3;
 	$string= str_shuffle($string);
 		$text = substr($string,0,6);
 		$_SESSION['capt'] = $text;
